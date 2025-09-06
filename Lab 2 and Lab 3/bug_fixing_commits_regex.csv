@@ -1,0 +1,1632 @@
+Hash,Message,Hashes of parents,Is a merge commit?,List of modified files
+c9832a76f6af231bffde5209ae0b0377be8d6a45,"fix: add default config for torch optimizer
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['93f25126c645c2aa9c12b9b640baebb1181752a9'],False,['raylab\\algorithms\\naf\\naf.py']
+570441605fd5982d557fa673596f7572e4f3e9bb,"fix(naf): disable gradient computation in compute_actions
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['c9832a76f6af231bffde5209ae0b0377be8d6a45'],False,['raylab\\algorithms\\naf\\naf_policy.py']
+265fc2e1faaf5ba4d9effcc7eb4fdf16fa14c5d6,"fix(td3): check if horizon is None
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['570441605fd5982d557fa673596f7572e4f3e9bb'],False,['raylab\\algorithms\\ddpg\\ddpg_policy.py']
+60fc408c34db933570397e6a919429067de83e27,"fix(naf): return info dict with loss computation
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['9ea553df1659149c7aab75ee4985f1c49d443ed3'],False,['raylab\\algorithms\\naf\\naf_policy.py']
+aa154c5c82be0b16c5cfcf03a8db91058cf03a40,"fix(tests): return scalar reward in MockEnv
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['60fc408c34db933570397e6a919429067de83e27'],False,['tests\\mock_env.py']
+8d7713801bde2a98cab7368b446880ceaff3a192,"fix(naf): remove in-place operations and calculate logits from state
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['34a76ec20040fa19b19ed118b1743e161bfdd319'],False,['raylab\\algorithms\\naf\\naf_module.py']
+1b5bb84187787f51de085d2dd202f0dcd8e7a83a,"fix(naf): correctly calculate best value
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['95d6dd44122a76ed4c09ba34a5b7f6a0f1165317'],False,['raylab\\algorithms\\naf\\naf_policy.py']
+a002efa225a8d28d5f746f72972cc49a60cd43f4,"fix(scripts): add script import routine
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['8ec4206fcbd75927081e13ad2cbe2e4e184339ea'],False,['scripts\\tune_experiment.py']
+7f16949fbf86ba24bf30665e926806358dfc89cd,"fix(naf): optimize the parameters of the main module
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['a62ef27f94fd024db3eeb97bad9b756e3beb0cf1'],False,['raylab\\algorithms\\naf\\naf_policy.py']
+bd87b22c92e5ec9348e5865c9b2867c7eab3acec,"fix(naf): return appropriate advantage shape
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['f68f46717462b78e3c6a8f7cb76ff521b578135d'],False,['raylab\\algorithms\\naf\\naf_module.py']
+6c2f88b0f5b484dc5f1e795c39f252bb754b43f7,"fix(naf): assert number of workers is 0
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['bd87b22c92e5ec9348e5865c9b2867c7eab3acec'],False,['raylab\\algorithms\\naf\\naf.py']
+21a67cca7c4f8f58ac222f91150e93b85ab6917a,"fix(naf): avoid NaNs by squaring diagonal elements
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['6c2f88b0f5b484dc5f1e795c39f252bb754b43f7'],False,['raylab\\algorithms\\naf\\naf_module.py']
+3daacd69c4bec4c7236c52a71865576bce692b38,"fix(naf): avoid errors when loading weights
+
+NAF state dicts are different when exploration policy varies, even though all parameters
+and buffers are the same. Since the NAF encapsulates all the modules, we load the state
+dict from it instead.
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['ab22d293b173d710aabe7cdd7c588e7fbadc7f67'],False,['raylab\\algorithms\\naf\\naf_policy.py']
+5dfcab73af87eb0171a0ecb35e82167cabc294e0,"fix(naf): revert TrilMatrixModule to trace-friendly implementation
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['ab98bf7ab63ef8faee36bceb99c8aa5217ec7b6d'],False,['raylab\\algorithms\\naf\\naf_module.py']
+451bdd1430f6e0bd593536647300b41f8db18097,"fix(viskit): avoid inserting repeated keys
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['99bf556e2fc5f5f87321129477c85e4ad1ead461'],False,['raylab\\viskit\\core.py']
+81ac1ae22cfc0a8076d72a8812dd6a1b5e86c66c,"fix(viskit): set estimator to None for individual runs
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['1278ef5c5f2953d14477cfa7e21551e7cfcc992e'],False,['raylab\\viskit\\plot.py']
+478d7e74593c2abb3ed9e64f2a79b8d03f53dc33,"fix(logger): filter values before logging
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['a7eb892e9e0f947fe88ec7aa3c2164b81e9ab01a'],False,['raylab\\logger\\torch_tensorboard_logger.py']
+521a4fd978ed5a61db7ea2ad96f7f2d6580e1572,"fix(logger): avoid closing non-existent file logger
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['478d7e74593c2abb3ed9e64f2a79b8d03f53dc33'],False,['raylab\\logger\\config_json_logger.py']
+4eab9a9e8b2205e25e979a4f553e0d27573658e6,"fix(logger): exclude ""done"" from tensorboard logs
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['521a4fd978ed5a61db7ea2ad96f7f2d6580e1572'],False,['raylab\\logger\\torch_tensorboard_logger.py']
+62e4903e1f427b81338802c49dce9183392614c8,"fix(scripts): require file path for experiment analysis
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['4eab9a9e8b2205e25e979a4f553e0d27573658e6'],False,['scripts\\best_checkpoint.py']
+2007715319c4a665062c1165b90f5ec18104a3b6,"fix(naf): update twin target network
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['663ba73dcb69c52de6dcd4c3ccdf3ff2104ecb55'],False,"['raylab\\algorithms\\naf\\naf_policy.py', 'raylab\\utils\\pytorch.py']"
+72bda3f1b31fc4a4f9d98d396b8ed884937e30d5,"fix(modules): use correct activation name default
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['87717e845847b95e38b5a1033a47c5db6925bb29'],False,"['raylab\\modules\\fully_connected.py', 'raylab\\modules\\state_action_encoder.py']"
+b7db6a39839e0d66c67c45a99e57b0e96d03cbb3,"fix(modules): avoid calling the activation string
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['531786cc4db624f716cf578ed3354eb2f8a13863'],False,['raylab\\modules\\state_action_encoder.py']
+338f1a59dd1d3c34367cb519bfc7e2286bf0acd9,"fix(utils): concatenate lists with lists
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['b7db6a39839e0d66c67c45a99e57b0e96d03cbb3'],False,['raylab\\utils\\replay_buffer.py']
+1069476bbb5a8fbabf412ccc15e1958d40924dfb,"fix(modules): ensure scale_diag is positive
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['3c17d62c2e583f8f202bbc7078348d30aefe4129'],False,['raylab\\modules\\diag_multivariate_normal_params.py']
+d8d2e3825e5f7dba4f5bc57057b3ea3e90360cb9,"fix(svg): ensure scale_diag is positive
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['1069476bbb5a8fbabf412ccc15e1958d40924dfb'],False,['raylab\\algorithms\\svg\\svg_module.py']
+6ef23099cfe3d1a43f6eb56465352338097ce005,"fix(policy): remove redundant braces in repr
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['d8d2e3825e5f7dba4f5bc57057b3ea3e90360cb9'],False,['raylab\\policy\\torch_policy.py']
+11e738bb9be622df84b518a54ffe7616b3330060,"fix(svg): correctly calculate diagonal Normal log prob
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['62ce750660301b3294d9250139be5c6228e3a0de'],False,['raylab\\algorithms\\svg\\svg_module.py']
+1a0027da9ce3332ce56df213c29b8b758a13c137,"fix(svg): use float values in exponent
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['3e76d29a3cc268996932fdef8c8e2df4aa793bea'],False,['raylab\\algorithms\\svg\\svg_inf_policy.py']
+602bb0dbd03443ba72380671ed690c274ac81077,"fix(envs): avoid accessing missing attributes
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['688f6d2f3cf811a3637d465c851b232a85f798b0'],False,"['raylab\\envs\\registry.py', 'raylab\\envs\\time_aware_env.py']"
+a00106c907ac913177d9d589bbe4b4f65fa24791,"fix(envs): account for observation variables in reward function
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['60446204575b4fab3dc95045bea879e928a1488c'],False,"['raylab\\envs\\cartpole_swingup.py', 'raylab\\envs\\registry.py']"
+10a783b66c2e00ed603487c4d808cb47455a9586,"fix(svg): use TorchPolicy init in SVG(1)
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['f66069152aa557b8c47382731f9f203df1656b8c'],False,['raylab\\algorithms\\svg\\svg_one_policy.py']
+efdd582147c4c5ccac81669d343ee204577a834e,"fix(svg): minimize negative cummulative reward
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['130ffc1df3bed4cfd0c459cd392ef3022f30e6a5'],False,['raylab\\algorithms\\svg\\svg_inf_policy.py']
+cb6b6912edc44919b4f5dfc3f5827a39d56af8b5,"fix(envs): cast reward to python float and clamp time variable
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['c4facd6f9912dde0bd458b99f570fa3cd9cc1bc0'],False,['raylab\\envs\\navigation.py']
+dc6b91b1210922d65c722af46cf49a4f8e752ea4,"fix(algorithms): rename SVG(one) to SVG(1)
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['baaec66a75d18b920c52304e75a0b05773cef2ba'],False,['raylab\\algorithms\\registry.py']
+5395f1b36a1fb1f36a3eeaba5d3c6f93d4f1415c,"fix(svg): regress towards the state difference in SVG(1)
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['89e897fe87992ae228ff6831f5f3b652f7cdbf7b'],False,['raylab\\algorithms\\svg\\svg_one_policy.py']
+4f98d617f253bbdf0efe9c60ab8bb07fd97843c4,"chore(svg): log online model error and importance sampling ratio
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['a3d70583caf179d8f07ab8c4aea686cca0aba1d0'],False,['raylab\\algorithms\\svg\\svg_inf_policy.py']
+f3397f285757163bf67dcd774c1bf45286b6b1f2,"fix(svg): register model submodules with `nn.ModuleList`
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['4f98d617f253bbdf0efe9c60ab8bb07fd97843c4'],False,['raylab\\algorithms\\svg\\svg_module.py']
+e16c26d28aacd8df64f4fd701a5c11883e96a03f,"chore(examples): fix typos and update defaults for SVG(inf)
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['f3397f285757163bf67dcd774c1bf45286b6b1f2'],False,"['examples\\svg_inf_cartpole_defaults.py', 'examples\\svg_inf_navigation_defaults.py']"
+7af748425ad788f2bc0a52afd518620745f20510,"fix(envs): account for batched states in reward_fn
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['5701f1239842dfefb3866c0c740c1c41cc05fbf1'],False,['raylab\\envs\\navigation.py']
+4b5d65100a423bd726aaee34fb7a3f98a980d981,"fix(svg): minimize negative TD target in SVG(1)
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['7af748425ad788f2bc0a52afd518620745f20510'],False,['raylab\\algorithms\\svg\\svg_one_policy.py']
+8fa16a79179fbe04a875e13504896a0cadd7d423,"chore(examples): update SVG(1) navigation and fix typos
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['4b5d65100a423bd726aaee34fb7a3f98a980d981'],False,['examples\\svg_one_navigation_defaults.py']
+2ab9c8f1af6be8f348313a10a69aafb58c7267e6,"fix(svg): disable grad for extra info and recompute logits
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['3e87248900337a8e2077be26225b6156a9955a8b'],False,['raylab\\algorithms\\svg\\svg_one_policy.py']
+cc10df29c8426458434e4fdc2e411040c4d61ed1,"fix(tests): change main critic parameters before updating target
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['6f1d0aaede15451bdc1420c07b600c0734ede3ea'],False,['tests\\algorithms\\svg\\test_value_function.py']
+523ecf0e1a7a2455980cff939ba74aa4a68a9145,"fix(svg): initialize target critic to be equal to the main one
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['cc10df29c8426458434e4fdc2e411040c4d61ed1'],False,['raylab\\algorithms\\svg\\svg_base_policy.py']
+25ab9630da4c8bce49310f40875cd8511c31f113,"fix(utils): only calculate recommended gain if not specified
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['738249d96e0fae1721b2725eee3d62358313c74b'],False,['raylab\\utils\\pytorch.py']
+e5424702552b351fab4c81f630945d3ceb7c3442,"fix(naf): give higher priority to param noise mixin
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['6bc8cde3236fabd2d5d45b7b252ebeb77b0dd78d'],False,"['raylab\\algorithms\\naf\\naf_policy.py', 'raylab\\policy\\parameter_noise_mixin.py']"
+9fffa94b3655460884a7119f867e64567e6dc255,"fix(svg): freeze model and critic for SVG(1) loss
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['b91d7c5fcf4cb47a5f377d3a04e9cfa2ed38cc8e'],False,"['raylab\\algorithms\\svg\\svg_base_policy.py', 'raylab\\algorithms\\svg\\svg_inf_policy.py', 'raylab\\algorithms\\svg\\svg_one_policy.py']"
+7ed10df8b5dbc0b122513177e6b568625557b7b0,"docs(modules): fix typo
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['2e9fde789fccf0dcc404609f3e016bbe27d4ada2'],False,['raylab\\modules\\diag_multivariate_normal_params.py']
+ef843872978c0afc7594cc9e3edddaa480d2daad,"fix(tests): use make_module in  NAF module tests
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['b706df4768c7438c93ab16f3afa487f90a438d51'],False,['tests\\algorithms\\naf\\test_module.py']
+89d2a33229869bb9f7165b0f5fdf3af071784d30,"fix(modules): call rsample() to produce output
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['ef843872978c0afc7594cc9e3edddaa480d2daad'],False,['raylab\\modules\\diag_multivariate_normal_rsample.py']
+ab6dfc0803a9f1a2f12997559e3fe8c7a4dfcc9f,"fix(distributions): avoid computing the log of zero
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['89d2a33229869bb9f7165b0f5fdf3af071784d30'],False,['raylab\\distributions\\transforms.py']
+2bf8614c1379bc82ffd32fdb18e6e83541c31ffb,"fix(sac): log correct alpha grad stats
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['b6a45d00a8bcaae7d33e404a5753e501e4fb373f'],False,['raylab\\algorithms\\sac\\sac_policy.py']
+bd378359f84c5475e41eafb559df098999e37677,"fix(envs): use correct state slice for reward_fn in Reacher
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['9329f7a1fb1a497ecd92309f07f52aa392ec03b2'],False,['raylab\\envs\\reacher.py']
+5e7f06176baff442256027f93f4f97b6d7b1fb2e,"fix(tests): import sampling module from appropriate module
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['0f347a24015fe5696e1a3cdf1c1e6c3eea186e46'],False,['tests\\modules\\test_diag_multivariate_normal_rsample.py']
+888029a9d62d8b550ce694a38f6c5ff77bb33c1a,"fix(svg): log mean & std over trajectory actions
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['b10c077b57199a1c0bdc385b612b04c18f7d4778'],False,['raylab\\algorithms\\svg\\__init__.py']
+dfa6d460959bb8755463c075d6ee8602a937021c,"fix(svg): calculate KL against policy at beginning of replay
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['888029a9d62d8b550ce694a38f6c5ff77bb33c1a'],False,"['raylab\\algorithms\\svg\\svg_base_policy.py', 'raylab\\algorithms\\svg\\svg_inf_policy.py', 'raylab\\algorithms\\svg\\svg_one.py', 'raylab\\algorithms\\svg\\svg_one_policy.py']"
+9098da86321e5503b12776699dd4ecfba9f0ac6d,"fix(svg): calculate timesteps_this_iter by steps_sampled
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['dfa6d460959bb8755463c075d6ee8602a937021c'],False,['raylab\\algorithms\\svg\\svg_one.py']
+82927d78e47cea2499c57e288e9cb684c6b4e219,"fix(sac): update num_steps_sampled inside loop
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['9098da86321e5503b12776699dd4ecfba9f0ac6d'],False,['raylab\\algorithms\\sac\\sac.py']
+bc5b331b0a69b1a2a0863cbc9c66bae89bf5dac1,"fix(modules): make DiagMultivariateNormalParams TorchScript friendly
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['ff6828a1873c622a3ecceb5c62510a6da734cd3f'],False,['raylab\\modules\\diag_multivariate_normal_params.py']
+2e558fa4f707f17bf9fcda35f788c762b947ee2d,"fix(sac): compute target entropy based on first action shape
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['bc5b331b0a69b1a2a0863cbc9c66bae89bf5dac1'],False,['raylab\\algorithms\\sac\\sac_policy.py']
+a39cde9cab3e7b4bc97ee01910ab1029c1afbf6c,"fix(tests): use correct target entropy
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['47e9b822b6aab0b10d0dfd4268bc6c852d6c155f'],False,['tests\\algorithms\\sac\\test_entropy_coeff.py']
+642cc7971f24a990141b54170cdf5943c2826815,"fix(sop): make module consistent in both training and evaluation
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['0323940ad61f527ff106d66a776d6e5291eaa325'],False,['raylab\\algorithms\\sop\\sop_policy.py']
+e68b027b034db918dfa8ff5e4799eb5ef936f64b,"fix(naf): compute action distance before squashing
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['13c7b37686bc7b7850d482fdf0405e50a2205bfd'],False,"['raylab\\algorithms\\naf\\naf.py', 'raylab\\algorithms\\naf\\naf_policy.py']"
+2f3913e8da6038563e04ead3e902dcd4d163d479,"fix(sop): compute action distance before squashing
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['43377a33a8c15122753bbace716c9d8147e90aaf'],False,['raylab\\algorithms\\sop\\sop_policy.py']
+adffddb885295d95925a46d5dec9337294d27f6e,"fix(policy): always create param noise spec
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['3e48dfb8ba7795addf974b15d6df44753773d5d3'],False,['raylab\\policy\\parameter_noise_mixin.py']
+53dc05dff0e88a2e69df927197e390edbd723107,"fix(examples): put proper environment name in examples
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['20291c5a8761caf644aa2bdc88db07fb67d9f236'],False,"['examples\\SAC\\walker_defaults.py', 'examples\\SOP\\walker_defaults.py']"
+c9dc2d2b4ea9f75404eb3cbf0c585c55162f7417,"fix(examples): remove TimeLimitedEnv
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['dca2a077ef467884e2ecc9ccaae0efc759cc70ba'],False,"['examples\\NAF\\exploration_experiment.py', 'examples\\NAF\\reacher_defaults.py', 'examples\\PG\\cartpole_defaults.py', 'examples\\SAC\\cartpole_defaults.py', 'examples\\SAC\\cheetah_defaults.py', 'examples\\SAC\\hopper_defaults.py', 'examples\\SAC\\reacher_defaults.py', 'examples\\SAC\\walker_defaults.py', 'examples\\SOP\\hopper_defaults.py', 'examples\\SOP\\swingup_defaults.py', 'examples\\SOP\\walker_defaults.py', 'examples\\SVG(1)\\cartpole_defaults.py', 'examples\\SVG(1)\\cheetah_defaults.py', 'examples\\SVG(1)\\reacher_defaults.py', 'examples\\SVG(inf)\\reacher_defaults.py']"
+1ccaf1fa2ceda82b73c9ac5e6975408af98b473b,"fix(tests): use updated configs module test for NAF
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['40963a74e100f7276313c201a3893846a1f99d3d'],False,"['raylab\\algorithms\\naf\\naf.py', 'tests\\algorithms\\naf\\test_module.py']"
+be249d5cebfbb25762a054af86f32599dad907f7,"fix(tests): cleanup pytest warnings
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['06b6410fbd33ea223f1222013d43a188ecd9ce7f'],False,"['tests\\algorithms\\sop\\test_critic.py', 'tests\\algorithms\\sop\\test_policy.py', 'tests\\algorithms\\svg\\test_value_function.py', 'tests\\modules\\test_dist_ops.py']"
+ea6f5e2d6a11dd8eceeae1a064d45ff0e63a9ec8,"fix(mapo): avoid returning tensors in info dict
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['14cbf19df96607b0b32c0731a89668318e8e6fd0'],False,['raylab\\algorithms\\mapo\\mapo_policy.py']
+2dc36c33c8989d001a71158d8b4a3f43ba0b77af,"chore(mapo): fix typo in docstring
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['ea6f5e2d6a11dd8eceeae1a064d45ff0e63a9ec8'],False,['raylab\\algorithms\\mapo\\mapo_module.py']
+74aa39df82e65efb941d26dbee76af44ea53b2c6,"fix(mapo): correctly compute reward in model-aware dpg
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['f184e013fa5feb62691f0706854bde7fe8edc7b2'],False,['raylab\\algorithms\\mapo\\mapo_policy.py']
+1c5e7358db357701c9dbaa26d98a5d7deda09437,"fix(tests): correctly reuse fixtures
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['74aa39df82e65efb941d26dbee76af44ea53b2c6'],False,"['tests\\algorithms\\conftest.py', 'tests\\algorithms\\mapo\\conftest.py', 'tests\\algorithms\\sac\\conftest.py', 'tests\\algorithms\\sop\\conftest.py', 'tests\\algorithms\\svg\\conftest.py']"
+5f5cb6050f8edb9929912b594947e3038cdbe206,"fix(mapo): zero critic grads before computing the loss
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['b95ac77014bb2cb3249af7704351f67764453f51'],False,['raylab\\algorithms\\mapo\\mapo_policy.py']
+eea99b6f4ccd44706780d8a288163b30767b4131,"fix(modules): detach samples before computing log_probs
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['b79e6b93366aa040c951bef24c492f0d9b5ed753'],False,['raylab\\modules\\dist_ops.py']
+48ed0fd0e3f08fbed0db338f8debccae46d7d041,"fix(algorithms): log evaluation metrics only if needed
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['f0720ba4269df3fa5154b186373720616d280c3b'],False,['raylab\\algorithms\\trainer.py']
+ed44a6689d84eb3a1d6d202b56956dd6970a54d0,"fix(examples): use a network bottleneck for random walks
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['1601ae633967781772bebfead2c9b5c586e95d53'],False,['examples\\MAPO\\navigation_gaussian_walks.py']
+1404ed47a61d036691e74ae6165ce0655bec910e,"fix(envs): enable proper reseting of IBEnv and IDS
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['563fed5d4a15cdecc19795e5786a78875521748c'],False,"['raylab\\envs\\industrial_benchmark\\ids.py', 'raylab\\envs\\industrial_benchmark\\openai_ib.py']"
+0b4006b84f68e84e4cf1cda623f208793165e98c,"fix(envs): cast info to dict so that rllib does not complain
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['7d052760c807dc1db30cd2c0aacee1bbcd5b0df8'],False,['raylab\\envs\\industrial_benchmark\\openai_ib.py']
+ab488630f66b7b29c1588f971b3e7fa32c5c0206,"fix(envs): use unconstrained space for additional markovian variables
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['0b4006b84f68e84e4cf1cda623f208793165e98c'],False,['raylab\\envs\\industrial_benchmark\\openai_ib.py']
+82bec219f08c4ba38d6b9d534609de9b06425db6,"fix(envs): use unconstrained observation_space for IB
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['ef6a78f56aec939426b527598aa7fd6e10d1eed0'],False,['raylab\\envs\\industrial_benchmark\\openai_ib.py']
+c05c816a0ffd9b886cf48b20da1c55ac1f2391d8,"bugfix(env): change action space to normalized actions; reward in batch
+
+Signed-off-by: Thiago P. Bueno <thiago.pbueno@gmail.com>",['cb5a89cb93ed6b59e4e66a726d874527cd4addce'],False,['tests\\envs\\test_reservoir.py']
+2fa3a888eac839a10ce175dd42a2efd6f2ecc52e,"bugfix(env): fix reservoir obs and action spaces
+
+Signed-off-by: Thiago P. Bueno <thiago.pbueno@gmail.com>",['c05c816a0ffd9b886cf48b20da1c55ac1f2391d8'],False,['raylab\\envs\\reservoir.py']
+fd0d5cef1705d3d067b27a8c8304e9a91eae58ff,"fix(mapo): squeeze singleton baseline dimension
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['7bcb3d0959076ea1ca605d990e7098e977d75e15'],False,['raylab\\algorithms\\mapo\\mapo_policy.py']
+e54a327b439277c5dd8cbd2627463f1091b69f01,"chore(scripts): expose bug by renaming SOP to SAC
+
+By renaming SOP to SAC (both in registry.py and SOPTrainer._name), subsequent trials
+fail giving ""ImportError: Could not import tensorflow""
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['47cb3a162ee9c9b45cbc50db1796c1a4391497e2'],False,"['raylab\\algorithms\\off_policy.py', 'raylab\\algorithms\\registry.py', 'raylab\\algorithms\\sac\\__init__.py', 'raylab\\algorithms\\sac\\sac.py', 'raylab\\algorithms\\soft_actor_critic\\__init__.py', 'raylab\\algorithms\\soft_actor_critic\\sac.py', 'raylab\\algorithms\\soft_actor_critic\\sac_policy.py', 'raylab\\algorithms\\sop\\sop.py', 'scripts\\test_sac_crashes.py', 'scripts\\test_sop_crashes.py']"
+7e3a9b1654012f9ff759ecaf0e08bc2c05db3207,Merge branch 'bugfix/sac-crashes' into develop,"['b73aa99c1dd4061bb9ded02c1de4800158c12c7a', 'a125e7ee515e3deccba0e65a7f56ae6b5aa59346']",True,[]
+3cc65cde0c82204c2e0b1dcd331ca79d04745792,"fix(envs): cast sample_shape to torch.Size
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['5ef9981012ac6b142b531467f204680ac77710c2'],False,['raylab\\envs\\cartpole_swingup.py']
+43c39971592a6a787f2c3f6c9a3e23f561994fe5,"fix(envs): correct logp calculation in Reservoir's transition_fn
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['77502307affdcf6cf1b6c4e652fc66fbd26c6323'],False,"['raylab\\envs\\reservoir.py', 'tests\\envs\\test_reservoir.py']"
+f0cb6c6c9e0f9f0a66b21cb111c469c9f788591f,"fix(examples): properly use env_config for Reservoir
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['43c39971592a6a787f2c3f6c9a3e23f561994fe5'],False,['examples\\MAPO\\reservoir_defaults.py']
+525899dec98b051bf2899c48236658d0f1ab7589,"fix(envs): compute deceleration with multiple centers
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['392156e80282b45452006245aed1fd4db3a1933e'],False,"['raylab\\envs\\navigation.py', 'tests\\envs\\test_navigation.py']"
+932521b3e8496f92b8215307fed52ce56e6e4a1c,"Merge tag 'v0.4.0' into develop
+
+* Unify raylab and viskit CLIs
+* Implement MAPO (WIP)
+* Fix naming error with SAC","['4ecdd424b0faf47f92ca47eff09b117a5eb13947', 'c6400fc99f2e04a76d165e14ae43380838a66b7f']",True,[]
+b367b287191afad6f128ebea23c2ae6a061a37c1,"fix(envs): keep dim when calculating convoluted cost
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['55178cb343cf46fa4e3d91629a20fbfa04dd0acf'],False,['raylab\\envs\\industrial_benchmark\\dynamics\\op_cost.py']
+d2334549a9665e89ee38cebf72dee8d3bfe42ab8,"fix(envs): take remainder w.r.t. 2 * pi
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['b367b287191afad6f128ebea23c2ae6a061a37c1'],False,['raylab\\envs\\industrial_benchmark\\goldstone\\torch\\reward_function.py']
+2df41b8f32f650fbebff42245bd053035c6010b2,"fix(flows): properly interleave variables when decoding
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['47a438cce5791c5c3661b1554e07c3cc4082c6cf'],False,['raylab\\modules\\flows\\affine_half.py']
+1fd60dcc7e25cef462bc66bb2b70efb8e436a00d,"fix(flows): interleave variables when decoding in CondAffineHalfFlow
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['afdf6b67e04f94c40088c07daeb1628b189815eb'],False,['raylab\\modules\\flows\\cond_affine_half.py']
+105e9bf384e687809f363a950d911edc31cbd1f5,"fix(utils): patch failure case with missing activation options
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['b842e1a8740fa08d9054b9db2aa331d93a6dbc20'],False,['raylab\\utils\\pytorch.py']
+58e9885d3529f9a9f7d267794b37d031d2dede9f,"Merge tag 'v0.4.1' into develop
+
+* Add differentiable model for IndustrialBenchmark
+* Add Normalizing Flow modules
+* Several bugfixes and improvements","['105e9bf384e687809f363a950d911edc31cbd1f5', '1bd93d94d68267d697eba4eb07cafee9ca3ddf63']",True,[]
+973cc2824f6a569f278359dfc2be911e4bb11940,"fix(envs): expand action given sample_shape in IB transition_fn
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['5a1b3aaf5a9bf4ac02a052a061691fc43495d5cc'],False,['raylab\\envs\\industrial_benchmark\\openai_ib.py']
+cedfa4a633d7b26d17716f3497ac90ee85d11a23,"Merge tag 'v0.4.2' into develop
+
+* Fix issue with tensor broadcasting in IndustrialBenchmark's transition_fn","['58e9885d3529f9a9f7d267794b37d031d2dede9f', '5ce8256acd87510b1ce357bcce8dac74f64420c2']",True,[]
+aff11fec6fcf5095d75eb56ec1f4dc99c9466592,"fix(envs): maker Goldstone reward robust against NaNs
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['cedfa4a633d7b26d17716f3497ac90ee85d11a23'],False,['raylab\\envs\\industrial_benchmark\\goldstone\\torch\\dynamics.py']
+70b8794a241aa923973953f353680f37c4c45b7d,"fix(logger): import flatten_dict from updated ray
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['9d1237a23907b685768e9aa2672b09b7e7b24b0b'],False,['raylab\\logger\\csv_logger.py']
+46666397849a58823e410bc3afc7be6dc481bc05,"fix(logger): import flatten_dict from updated ray
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['d87409ed130a6d74ce7126def5de5badcf052365'],False,['raylab\\logger\\torch_tensorboard_logger.py']
+83501a4dc3309d2fa1bf602d2acebcf5c1162681,"chore: fix ray version requirement
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['aa62cf733401dc8294fc28ed213f1b8bbf1d184a'],False,['setup.py']
+e8fc7d5942c66abf401e63d24f5b28afa702d2b9,"chore(envs): update goldstone environment
+
+* fix naming and convention errors
+* (wip) change reward function to better match the visualizations in the paper
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['c2712eee48ff0a4fe34e959a188edc9567bc65c8'],False,"['raylab\\envs\\industrial_benchmark\\goldstone\\dynamics.py', 'raylab\\envs\\industrial_benchmark\\goldstone\\environment.py', 'raylab\\envs\\industrial_benchmark\\goldstone\\nlgp.py', 'raylab\\envs\\industrial_benchmark\\goldstone\\reward_function.py', 'raylab\\envs\\industrial_benchmark\\goldstone\\torch\\dynamics.py', 'raylab\\envs\\industrial_benchmark\\ids.py']"
+e5c54c8a01e40003dee88060771981b522426fc8,"chore(envs): update Industrial Benchmark
+
+* Fix convention and naming issues
+* Set constants as class attributes
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['e8fc7d5942c66abf401e63d24f5b28afa702d2b9'],False,"['raylab\\envs\\industrial_benchmark\\effective_action.py', 'raylab\\envs\\industrial_benchmark\\goldstone\\dynamics.py', 'raylab\\envs\\industrial_benchmark\\goldstone\\environment.py', 'raylab\\envs\\industrial_benchmark\\ids.py', 'raylab\\envs\\industrial_benchmark\\openai_ib.py']"
+329813e4641b01f7502ea1c63b7e41f3218a85a1,"fix(scripts): address name errors in log_ib_vars.py
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['dcffa22c62942f422c393956fa0faf4b8b34a4c3'],False,['scripts\\log_ib_vars.py']
+cd6e9966214b85dffce45456b27822b9c2ecbf43,"fix(envs): fix import errors
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['fe085b02a900d9cc49ff32c52f22a9133f3e8647'],False,"['raylab\\envs\\cartpole_swingup.py', 'raylab\\envs\\registry.py']"
+29023e4237f1cc1df03fff423a68df429e9fc271,"fix(tests): organize tests and fix bugs
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['c00d47eddde8c00ded07fc7fcdeb023c22e2d2d7'],False,"['raylab\\envs\\registry.py', 'tests\\algorithms\\mapo\\test_true_model.py', 'tests\\conftest.py', 'tests\\envs\\conftest.py', 'tests\\envs\\test_cartpole_swingup.py', 'tests\\test_rollout.py', 'tests\\test_worker.py']"
+13f236f2ff2d561ea1d0bae9ee5ab37a10fa4ebd,"fix: treat incompatibilities with new Lambda module
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['16c6e35b21de8d11bca9e850caf75dde0b2bef1b'],False,"['raylab\\algorithms\\mapo\\mapo_policy.py', 'raylab\\algorithms\\naf\\naf.py', 'raylab\\algorithms\\svg\\svg_one_policy.py', 'raylab\\modules\\basic\\diag_multivariate_normal_params.py', 'raylab\\modules\\naf_module.py', 'raylab\\modules\\value_function.py', 'tests\\algorithms\\naf\\test_module.py']"
+db3a8c83b2447075f943343f66b7fae3d2287d34,"fix: erase TracerWarning in TanhTransform
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['ced161d41a82e48ae92cce7b7c5b59a432786003'],False,['raylab\\distributions\\transforms.py']
+d156a2e438f598c0da3420ff2722041b14057a29,"fix(tests): correctly pass delay_action fixture
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['0987c21d0b33e94611b16455b11c45e75832c780'],False,"['raylab\\modules\\basic\\state_action_encoder.py', 'tests\\modules\\basic\\test_fully_connected.py']"
+a9516b1c6ecaa5c297dd514f557189e83ed22120,"refactor(modules): optimize and fix tests
+
+* Move ExpandVector to its own module
+* Fix error in which SVG model's backward pass through scale_diag would fail
+* Share fixtures in module scope to accelerate tests
+* Rename model.sampler to model.rsample
+* Fix error cause by unpacking dictionary values in model tests
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['b1041cad55add7e77668dc9f9ba2a335136a5a56'],False,"['raylab\\algorithms\\mapo\\mapo_policy.py', 'raylab\\modules\\basic\\__init__.py', 'raylab\\modules\\basic\\diag_multivariate_normal_params.py', 'raylab\\modules\\basic\\expand_vector.py', 'raylab\\modules\\stochastic_model_mixin.py', 'raylab\\modules\\svg_module.py', 'tests\\conftest.py', 'tests\\modules\\conftest.py', 'tests\\modules\\test_deterministic_actor_mixin.py', 'tests\\modules\\test_stochastic_model_mixin.py', 'tests\\modules\\test_svg_module.py']"
+59e842cc8aeb72fe95701a3d7ed001e197c93105,"fix(modules): invert order of transforms in ComposeTransform if reverse
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['56789b195671a90709202b92d4aaee33f0c15027'],False,"['tests\\modules\\distributions\\test_transforms.py', 'tests\\modules\\distributions\\utils.py']"
+2dd7e9c710d9331ceb89ef044290a65277abf452,"fix(svg): fix a problem with ReproduceRollout
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['ce23935f5a57e61e8cf0148c788e9add75fdb9de'],False,"['raylab\\algorithms\\svg\\rollout_module.py', 'raylab\\algorithms\\svg\\svg_inf_policy.py', 'raylab\\modules\\distributions\\abstract.py']"
+dbead7ede5643e70dda14f5d3abafad903e8fd25,"feat(cli): add option to ignore experiments with errors
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['8f806da233d1326089896e774471d36b3748c3d5'],False,"['raylab\\cli\\experiment_dashboard.py', 'raylab\\utils\\exp_data.py']"
+289240f23a20225b59ee247ac69141b5276829db,"fix(logger): avoid importing Tensorboard when not installed
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['cfad108d1c8c923862e8fb5e8ff7dc28c60c2ec5'],False,['raylab\\logger\\__init__.py']
+5042e9f082a04a934ce00e558ec818446dd6dae9,"fix(trpo): use different FIM formulation
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['f6026d6640470c919a032cb3a75c01c641d18413'],False,"['raylab\\algorithms\\trpo\\hf_util.py', 'raylab\\algorithms\\trpo\\trpo.py', 'raylab\\algorithms\\trpo\\trpo_policy.py', 'raylab\\modules\\basic\\categorical_params.py']"
+d43760e7d5a0f396266e6875e4c54d7584b9e876,"fix(trpo): stabilize policy gradient through log_prob calculation
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['d667afcdcb780489b3578005c2fdca4903c4ccc5'],False,"['raylab\\algorithms\\trpo\\trpo_policy.py', 'raylab\\modules\\distributions\\normal.py']"
+4850f4d0965b1391a52233f309139a504c31e4f8,"fix(cli): use correct Analysis to determine best logdir
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['292aea256e7bb48d86e0edb4b41343489e335238'],False,['raylab\\cli\\best_checkpoint.py']
+616b9c31035603224011e1db9f2279f09ede1dae,"refactor(cli): fix warnings in dashboard and clean up
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['4850f4d0965b1391a52233f309139a504c31e4f8'],False,"['raylab\\cli\\experiment_dashboard.py', 'raylab\\utils\\exp_data.py']"
+3006e87365e41bea0e91b5ad8af7603e3abf82e8,"fix(modules): use LeafParameter renamed from ExpandVector
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['ac7ada0900c98f3022d548d3fc6b9c6ff8e937a4'],False,['raylab\\modules\\basic\\normal_params.py']
+3a6beb1e26899ded771f320a2074ef18e0b4ad9a,"fix(cli): remove unnecessary print statement
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['8f206e216de9ba747c63ad390a72d39c77981d8a'],False,['raylab\\cli\\experiment_dashboard.py']
+ffe05a218d46c13a19bdaab3bc1bf38f59ebba45,"fix(modules): detach samples and subtract log_abs_det_jacobian
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['fe8558fd69438eacea27301f12f2ca8777659851'],False,['raylab\\modules\\distributions\\abstract.py']
+c612040108e34976bb58244bed6461f3374f75d7,"fix(modules): use correct change of variables formula
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['3e5d55b42a2485752106fc81d188d58fb77bb4f1'],False,['raylab\\modules\\distributions\\abstract.py']
+889fda60d33df76c4995259bbed0ce7369abbb1e,"fix(tests): fix issue with fixture params
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['472ffeff2149a8e441a160a66047760d948b2dad'],False,['tests\\modules\\test_stochastic_actor_mixin.py']
+2d7c57eac983bbf942533cd67346b7f84bf263d1,"fix(modules): correctly initialize TRPOTang2018
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['1808b1089d362b37558cc7bbccbcb7f7748afb49'],False,['raylab\\modules\\trpo_tang2018.py']
+d70f671d25ac5a37ced14895ef1754f53ffa026d,"fix(trpo): stabilize Natural gradient with fixed action samples
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['2d7c57eac983bbf942533cd67346b7f84bf263d1'],False,"['raylab\\algorithms\\trpo\\hf_util.py', 'raylab\\algorithms\\trpo\\trpo.py', 'raylab\\algorithms\\trpo\\trpo_policy.py']"
+23da265a9b6097ddd56ff87eec28cb3203122c53,"fix(modules): reimplement `mean_action_only` in stochastic actor
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['9117c467da15d5a2eb78d285a46283ffc5490c21'],False,"['raylab\\algorithms\\sac\\sac_policy.py', 'raylab\\algorithms\\svg\\__init__.py', 'raylab\\algorithms\\svg\\svg_base_policy.py', 'raylab\\modules\\stochastic_actor_mixin.py']"
+52095caccc071ecb8a83ad4a489abcfc5e302783,"fix(tests): adapt tests to new module defaults
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['ee4adbc67a59caa5b2085c0dd3ed95b36755b0da'],False,"['tests\\modules\\test_action_value_mixin.py', 'tests\\modules\\test_stochastic_model_mixin.py', 'tests\\modules\\test_svg_module.py']"
+aa100d9a11d9d1280e06f18963bd189f50497933,"fix(algorithms): evaluate on setup and allow unknown subkeys in ""module""
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['a287759e482aba89290f8a08ce0cbb531696d61c'],False,['raylab\\algorithms\\trainer.py']
+7177d7c30cda16377c5e767dbc9c0b32c09d63b5,"fix(trpo): avoid TRPOModule defaults mixing with other modules
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['82230947e6c6a530a2164e83222db9f53b6e71dd'],False,['raylab\\algorithms\\trpo\\trpo.py']
+497aba5e0a68ba2d775e69891ccac6c631847254,"fix(cli): filter NaN values from plots
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['2e4e5f6d02ce401f08955be919c34028887dbf06'],False,['raylab\\cli\\experiment_dashboard.py']
+c82b1a348889877c2773457ac69996de55ef76f7,"fix(svg): use entropy coefficient in actor and critic losses
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['497aba5e0a68ba2d775e69891ccac6c631847254'],False,"['raylab\\algorithms\\svg\\svg_maxent.py', 'raylab\\algorithms\\svg\\svg_maxent_policy.py']"
+6688b6fa024a7a78bacbe8572d4a22d033412e8a,"fix(envs): eagerly pop time limit arguments from env config
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['12b4938cd9ebcde2546a8dc57c7a0a4510f84a30'],False,['raylab\\envs\\utils.py']
+12ce25d852422922b9199a51f3ff003edb6f3ac7,"fix(utils): return nn.Identity class rather than instance
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['6ba5de38cb26a071316108e6f7134b9d93a8a2b1'],False,['raylab\\utils\\pytorch.py']
+ff5804478ab3f6b0d9b543aac88e3873fb9149a7,"fix(flows): call correct methods for forward and inverse
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['12ce25d852422922b9199a51f3ff003edb6f3ac7'],False,['raylab\\modules\\flows\\coupling.py']
+126df6f652e5bf9acbc66373eac32c59b47d92d2,"fix(networks): implement proper control flow
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['ff5804478ab3f6b0d9b543aac88e3873fb9149a7'],False,"['raylab\\modules\\networks\\mlp.py', 'raylab\\modules\\networks\\resnet.py']"
+3034d29edb49794d7c4715898ed4dfa59502b110,"fix(flows): use index_select for proper input splitting
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['126df6f652e5bf9acbc66373eac32c59b47d92d2'],False,['raylab\\modules\\flows\\coupling.py']
+ddcd4a6967a03c3646eca95d4a5d9b841b024f14,"feat(cli): add option to plot standard error bars
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['6b59aec5d7b184490f6c905c060f10c3a0c45611'],False,"['raylab\\cli\\experiment_dashboard.py', 'raylab\\cli\\utils.py']"
+e536e188f4ece01ce956af559104a872b19a4951,"feat(sac): add fixed entropy coeff
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['3aad7be24c5333b8534ea00e9c26b4ae6bbb3c3b'],False,"['raylab\\algorithms\\sac\\sac.py', 'raylab\\algorithms\\sac\\sac_policy.py', 'raylab\\modules\\off_policy_nfac.py', 'raylab\\modules\\sac_module.py']"
+b7f976c168d22cc5632b1d27ed6be14b3ff135a5,"fix(algorithms): sync global vars after train and checkpoint them
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['f1cfdc067d73834fe8821832cc692b5ae72d91e7'],False,['raylab\\algorithms\\trainer.py']
+5f3c8f8e203cfb037414007b6457067d5b4d159f,"fix(algorithms): sync global vars after restoring and return train stats
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['b799e34810f9b35706d068785fecaca9a04ee2ff'],False,['raylab\\algorithms\\trainer.py']
+6af84b42df765e253ce592d2f48ebb9c1c16bc70,"fix(modules): avoid normalizing flow actor and model mixins conflicts
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['1eaa5a8414d7fb693ed37dea1911cf07196b1a65'],False,"['raylab\\modules\\mixins\\normalizing_flow_actor_mixin.py', 'raylab\\modules\\mixins\\normalizing_flow_model_mixin.py']"
+4339a6e21dc0e3564ab06fcfb08a4c6da3d98fa3,"docs(envs): fix typo in IndustrialBenchmark
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['17182fdbdbca2b5e2f3233277f822ed7de76e0b5'],False,['raylab\\envs\\industrial_benchmark\\openai_ib.py']
+30233b2b34b0b6a54cd0bff37eccee1bc0d0c8b7,"fix(algorithms): avoid Trainer running evaluation upon restoring
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['4339a6e21dc0e3564ab06fcfb08a4c6da3d98fa3'],False,['raylab\\algorithms\\trainer.py']
+53e296237934138dcf3aed4faca996e2d0abdb0c,"fix(envs): remove faulty logger info in IndustrialBenchmark
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['30233b2b34b0b6a54cd0bff37eccee1bc0d0c8b7'],False,['raylab\\envs\\industrial_benchmark\\openai_ib.py']
+17fc20bd30d5a2e8b48db157cdefb3de291f5f28,"fix(sac): avoid gradients accumulating in Alpha
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['892202c4538cdef01df991fe1aca37c2784d74b9'],False,['raylab\\algorithms\\sac\\sac_policy.py']
+9f1d86020a528fa42e53de66e49af3ac0ea39d18,"fix(envs): avoid side effects on env_config
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['17fc20bd30d5a2e8b48db157cdefb3de291f5f28'],False,['raylab\\envs\\utils.py']
+4bf6575900cca45140de015630444f7a15c2502c,"fix(acktr): backpropagate critic gradients
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['a29faca53430a84ddd4e78143793ee3eed275bc9'],False,['raylab\\algorithms\\acktr\\acktr_policy.py']
+d1406bba18ed4ed2ca618f4dd61ff6c7e34dae82,"fix(cli): avoid pytest running module dashboard
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['8930962d4d41f4a8896bd1660a8f54063c8b46bc'],False,"['raylab\\cli\\__init__.py', 'raylab\\cli\\module_dashboard.py']"
+8c9e944df44f62acef09f68b6891a97169930617,"fix(svg): avoid gradients accumulating between components
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['4b0730e9a4159df49464b7e6060d0c3e51824368'],False,"['raylab\\algorithms\\svg\\svg_maxent.py', 'raylab\\algorithms\\svg\\svg_maxent_policy.py']"
+6752b314345bedadf6c06d7176479e5d822ede47,"fix(utils): ensure outputs are tensors in RandomUniform
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['91d0ff250406bf8c0bb82d546b1a4d32808bff52'],False,['raylab\\utils\\exploration\\random_uniform.py']
+ae1a51de8b987cd7443d75f95fda04c65310f2db,"fix(examples): rename MujocoReacher to Reacher-v2
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['fa90f36f80b9e8dd4146fe47fe389042a2230897'],False,['examples\\NAF\\reacher_defaults.py']
+5a01fc1e912ef98da84b4fd2be8ce31374ee079f,"fix(naf): separate action-value from state-value critics
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['ae1a51de8b987cd7443d75f95fda04c65310f2db'],False,"['raylab\\algorithms\\naf\\naf_policy.py', 'raylab\\modules\\naf_module.py']"
+2711f4ffdeb0458407212902a664d0a4b7be8582,"fix(examples): add working defaults for NAF on Reacher-v2
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['20d6fb3ca429758cd3d1bf58a00a790c1d9a6ade'],False,['examples\\NAF\\reacher_defaults.py']
+a6a527ce57e8ac6ff9211748d0ab1be5c3f39475,"fix(policy): always merge configs on init
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['86d194f1fa488eecb0d911c4aa6e689bff72652e'],False,['raylab\\policy\\torch_policy.py']
+b0e20c2bd0ef218f461d92b8385b08e3b7fe66d9,"test(mapo,naf): fix config fixtures
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['a6a527ce57e8ac6ff9211748d0ab1be5c3f39475'],False,"['raylab\\algorithms\\naf\\naf.py', 'tests\\algorithms\\mapo\\test_critic.py', 'tests\\algorithms\\naf\\test_policy.py']"
+f6392be2c9d3d40e1fa7cb0327262e4ef1ce2310,"fix(ci): install dependencies explicitly in .travis.yml
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['0225b8de0e9c4654f0ca1da12169347bdc78c764'],False,['.travis.yml']
+11a86ac38a1b2460c2a226e95e684263c7aefa11,"fix(envs): resolve float conversion error in _compute_ropt
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['83eff03f25b0df3a4f1e1819fa6427af87cdc529'],False,['raylab\\envs\\industrial_benchmark\\goldstone\\torch\\dynamics.py']
+a768e27d46978a1649625f203bcf53aa559e105b,"fix(trpo): correctly log gradient norms
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['11a86ac38a1b2460c2a226e95e684263c7aefa11'],False,['raylab\\algorithms\\trpo\\trpo_policy.py']
+13e73115ffcb8877f89a8184f06367ab5160e74c,"fix(envs): add workaround for Mujoco environments in reward registry
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['a768e27d46978a1649625f203bcf53aa559e105b'],False,['raylab\\envs\\rewards.py']
+00b180a0aff33abe745c55cdaafb84dcba65edc5,"fix(envs): only register environments with installed dependencies
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['13e73115ffcb8877f89a8184f06367ab5160e74c'],False,['raylab\\envs\\registry.py']
+713416619e53232eaeb728866b58bc6e031da7be,"Revert ""fix(envs): add workaround for Mujoco environments in reward registry""
+
+This reverts commit 13e73115ffcb8877f89a8184f06367ab5160e74c.",['00b180a0aff33abe745c55cdaafb84dcba65edc5'],False,['raylab\\envs\\rewards.py']
+edadc69054b17f5da76c657df75204fbcf2f7725,"refactor(utils): fix deprecation warning on update_polyak
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['713416619e53232eaeb728866b58bc6e031da7be'],False,['raylab\\utils\\pytorch.py']
+bd522f1b7fc88e28aaccfaea7d3d2b4c655c4372,"Merge tag 'v0.6.2' into develop
+
+Refactoring and bugfixes","['f8a3d786c6855e9072184d9aa66f64a8dfe39020', '20527a8d9449d8ba51967a4c278022ebcd9ac3fa']",True,[]
+e927c57da386b5e8e824685263501bf6f81f2493,"fix(policy): use torch.save()/load() on state dicts
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['e29e06ce38b4bed3b21b1675c535cadfc0acbb52'],False,['raylab\\policy\\torch_policy.py']
+8e77df3317f5df15c6ad3af5d247d081c2ee253a,"fix(examples): use ""type"" instead of ""name"" for modules
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['2b0fff116a3803dc20e42fc9e6420e778193024e'],False,"['examples\\ACKTR\\cheetah_defaults.py', 'examples\\ACKTR\\mujoco_cheetah_kfac_vs_ekfac.py', 'examples\\ACKTR\\pybullet_reacher.py']"
+5a529182d5cfd37efdf1dd92b86a824fa97a26da,"fix(modules): avoid errors with deep_merge in OnPolicyNFAC
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['8bf7764f018610e22f2db803b6df31ea562a9b6a'],False,['raylab\\modules\\on_policy_nfac.py']
+c75b2cd7a1ad4156b56b1358d832a58dc9d3c3cf,"fix(utils): avoid KeyError when requesting missing evaluation config
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['5a529182d5cfd37efdf1dd92b86a824fa97a26da'],False,['raylab\\utils\\checkpoints.py']
+1d2df8eecc4818ec3af2b3d05358f0c09fd6d0d9,"fix(kfac): reshape saved inputs and grads
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['c75b2cd7a1ad4156b56b1358d832a58dc9d3c3cf'],False,['raylab\\utils\\kfac.py']
+b72762f6e87023fc18bd39293224e575a852fd27,"fix(examples): use new Industrial Benchmark id
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['1d2df8eecc4818ec3af2b3d05358f0c09fd6d0d9'],False,"['examples\\BatchRL\\ib_generate_transitions.py', 'examples\\MAPO\\ib_defaults.py', 'examples\\SOP\\ib_defaults.py', 'examples\\SOP\\ib_mdp_vs_pomdp.py', 'examples\\SVG(1)\\ib_defaults.py', 'examples\\SVGMaxEnt\\nfmbrl_ib.py', 'examples\\SoftAC\\ib_miscalibration_only.py']"
+2a06c203e18d7dc49e1d84b1ecf7dda4fdee43e5,"fix(examples): use new cartpole swingup id
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['9d2523472e910bb6f4ec021f4dc82c450cac19bc'],False,"['examples\\MAPO\\swingup_defaults.py', 'examples\\NAF\\exploration_experiment.py', 'examples\\PG\\cartpole_defaults.py', 'examples\\SOP\\swingup_defaults.py', 'examples\\SVG(inf)\\cartpole_defaults.py', 'examples\\SoftAC\\swingup_defaults.py', 'examples\\TRPO\\gaussian_swingup.py']"
+6081f9997029fba3479fc98ebb92ed5044bd2dfc,"fix(agents): return grad norms as Python scalars
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['cf273562505f563d862f56dabd1cd8a4daf51f8f'],False,"['raylab\\agents\\acktr\\acktr_policy.py', 'raylab\\agents\\mapo\\mapo_policy.py', 'raylab\\agents\\naf\\naf_policy.py', 'raylab\\agents\\sac\\sac_policy.py', 'raylab\\agents\\sop\\sop_policy.py', 'raylab\\agents\\svg\\soft_svg_policy.py', 'raylab\\agents\\svg\\svg_inf_policy.py', 'raylab\\agents\\svg\\svg_one_policy.py', 'raylab\\agents\\trpo\\trpo_policy.py']"
+5bd109742b5e79b7ae56f515af9f9da66d38caac,"fix: limit Ray version
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['97bead0c0a22cf9a5ea7aab5237bb8aca8c28402'],False,['setup.py']
+48a46f4385837083b6f289a028a33825e5fc634d,"chore(examples): fix TRPO options
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['aa56a4487e7ab81988cce5feb8b50036b42f8a67'],False,"['examples\\TRPO\\cartpole_defaults.py', 'examples\\TRPO\\gaussian_cheetah.py', 'examples\\TRPO\\gaussian_swingup.py', 'examples\\TRPO\\pybullet_walker.py', 'examples\\TRPO\\real_nvp_cheetah.py', 'examples\\TRPO\\real_nvp_swimmer.py', 'examples\\TRPO\\tang_2018_cheetah.py', 'examples\\TRPO\\tang_2018_hopper.py', 'examples\\TRPO\\tang_2018_lander.py']"
+fedeb88d3ce9872fcc7a912356597651b7f520ad,"fix(agents): sample learning_starts steps before first update
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['48a46f4385837083b6f289a028a33825e5fc634d'],False,['raylab\\agents\\off_policy.py']
+5a971b633e2699a8f53d0eb72f1312fc6f530f80,"fix(agents): support evaluation of deterministic policies
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['2c855d3f181abbdf1fd21b5c3d6f00b7dcf61cea'],False,"['raylab\\modules\\naf_module.py', 'raylab\\policy\\action_dist.py', 'tests\\general\\test_trainer.py']"
+825bbf2a06d9588bda397252f041eb08e97f0802,"test(envs): increase absolute error tolerance for transition_fn
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['a00ca8268072ad7cb1549a31a0f041dee98e90af'],False,['tests\\envs\\test_cartpole_swingup.py']
+5ed73701339701b3ba245bba288e3edd98297f33,"fix(policy): return placeholder for deterministic action log prob
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['825bbf2a06d9588bda397252f041eb08e97f0802'],False,['raylab\\policy\\action_dist.py']
+bc52ca30156aabf2438a29c6f177564b42f77294,"fix(modules): use .sample() in StochasticModel.sample()
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['7e951fa80de6b4568f92b4880d959481e675af5b'],False,['raylab\\modules\\mixins\\stochastic_model_mixin.py']
+a0f2df1c3c5833e6e2f68eadf04e37c214fc9f9f,"fix(mapo): treat all model transitions as non-terminal
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['b556c46b05e024899bcd7551a8f6096d315cbc33'],False,['raylab\\agents\\mapo\\mapo_policy.py']
+7ec6dd2599f8387739beae3dc38b15ed3fbb5fdf,"fix(mapo): call environment transition_fn
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['0e535d8fb2a398e1cc6f1a0e3e7167ba59919cab'],False,['raylab\\agents\\mapo\\mapo.py']
+38a0eaf0bce72763a5dccac8c59e8c1f6608d6ac,"fix(mapo): check model with numerically stable obs and actions
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['7ec6dd2599f8387739beae3dc38b15ed3fbb5fdf'],False,['raylab\\agents\\mapo\\mapo_policy.py']
+e9a622dbb7aab71aacb9b79fc88e52942b849fc7,"fix(mapo): use sampled next_obs in target value
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['312f67bcff43bbd4a1ece97b8a2b8f78cb6643b9'],False,['raylab\\agents\\mapo\\mapo_policy.py']
+a28d6e52d64c4fbeb69a11d62b3efdf4b4447d8e,"fix(mapo): use main critic networks for actor and model losses
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['e9a622dbb7aab71aacb9b79fc88e52942b849fc7'],False,['raylab\\agents\\mapo\\mapo_policy.py']
+80bf21d02631c934cb35b70619d87ea17dcd4543,"fix(mapo): assert model does not optimize for action loss
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['2766ec5d1cbe39ee042689ba89050a004ba887fc'],False,"['raylab\\agents\\mapo\\mapo_policy.py', 'tests\\agents\\mapo\\test_model.py']"
+1d3d8b0b93934cb67cf6835d74019cc4dcb94ff2,"fix(ci): correct typo in requirements file
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['876e9f78ec525700fba85e79b96f83b7a905316e'],False,['.travis.yml']
+b2f5380ecada19c49febc7913dde95d85fe7a99f,"fix(agents): correct total timesteps logging with learning_starts
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['ed72c5b14ef06d7af957a3e202a89bacf6c07cba'],False,['raylab\\agents\\off_policy.py']
+8186f5ffcd928db58a1e8e561da781fa68bbd728,"fix(envs): remove old industrial benchmark import
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['8ac065ab2a9830d0cfce26367fd82dc9f0313e4c'],False,['raylab\\envs\\rewards.py']
+b150cd749e5b00463205a06026e71ddc77d9ed40,"fix(svg): revert to working implementations of actor-critic losses
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['1eb744e4992d590689fa4ccb53169961ad790b80'],False,"['raylab\\agents\\svg\\soft_svg_policy.py', 'raylab\\losses\\isfv_iteration.py', 'raylab\\losses\\svg.py']"
+0d57aa6dcc5b6e739b3690ac9aea2e3e3f3bf3a8,"fix(envs): register IndustrialBenchmark-v0 reward
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['70674b98b783ed606fb9c48a8b24a965fdf2177e'],False,['raylab\\envs\\rewards.py']
+9bca804009654d1e1cb2a3483669fc43662b8ae8,"fix(mbpo): ignore logp from model.sample
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['f9d37c37fcc0787f5a24755b7ac534a82db6ae14'],False,['raylab\\agents\\mbpo\\policy.py']
+aae2981feca4dcf88acfa369d197094d298e5935,"fix(envs): correct IndustrialBenchmark-v0 reward
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['dc6c7f41f5834afa9ef61a9dbdc9842b4fbc89dd'],False,['raylab\\envs\\rewards.py']
+1c89582ca101988e7d5efad46383625348764e8e,"fix(envs): correct IndustrialBenchmark-v0 reward
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['dcb226f10937ac513b209766234f7b22fab554a9'],False,['raylab\\envs\\rewards.py']
+d80002ac75cf53ff5ed5996b933dcbfcfedf76d0,"feat(losses): fix batch keys in MaximumLikelihood losses'
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['1d4030d87e812b73106970f60492d2b799f00077'],False,['raylab\\losses\\mle.py']
+3561d1713c58e7254bd7aca6611123f5781bb2ea,"fix(mbpo): add missing config
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['067df4304087f3ae3fbc1125e64c16a46ea1e019'],False,['raylab\\agents\\mbpo\\trainer.py']
+55be036b9dcca79ca30895157881d84b12ed117e,"fix(losses): correctly pass arguments to get_keys
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['3561d1713c58e7254bd7aca6611123f5781bb2ea'],False,['raylab\\losses\\mle.py']
+d0cd3ca076c55b2d5e2208e2f766a5ff3ff47599,"fix(losses): log individual model losses
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['55be036b9dcca79ca30895157881d84b12ed117e'],False,['raylab\\losses\\mle.py']
+d879d2343b7a72f43200f3f4f98b3f5329856b30,"fix(losses): use negative log-likelihoods
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['5f8d363bcb44c5f33b389eefc6a77bcc7c24f358'],False,['raylab\\losses\\mle.py']
+3abd33d55762768e621d19caeccf0656ecc2b8b4,"fix(agents): get learner stats on train_dynamics_model
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['f532fd2c2fb8ea3dc7e676d9212618dde845a4f7'],False,['raylab\\agents\\model_based.py']
+015101a674f5bda36055d80a2f9d894c2a5e60ed,"fix(mbpo): check for relative model improvement
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['3abd33d55762768e621d19caeccf0656ecc2b8b4'],False,['raylab\\agents\\mbpo\\policy.py']
+251aedb50f50d86190904b7f1dae76717efeff2e,"fix(mbpo): check if max model epochs is None
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['c0e54085f70d437bc4d2107dddff2d453962c038'],False,['raylab\\agents\\mbpo\\trainer.py']
+2f544b64ff5645992f2d08079c3e239533ad7a7e,"fix(mbpo): correctly log number of epochs
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['fc33d74767f8fd6fdc634580875a63470ae3bd75'],False,['raylab\\agents\\mbpo\\policy.py']
+e86e1acd8b1cbe6b1f16aa8b9950c05cd1fee697,"fix(mbpo): retrieve new model losses from info
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['2f544b64ff5645992f2d08079c3e239533ad7a7e'],False,['raylab\\agents\\mbpo\\policy.py']
+595d1c32ad7b436fe4986c4325cd3357a715b7e9,"fix(envs): address precision errors with relative timestep
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['63b3fc61483177df649f9ba2a10fbc633a173a76'],False,"['raylab\\envs\\environments\\hvac.py', 'raylab\\envs\\environments\\navigation.py', 'raylab\\envs\\environments\\reservoir.py', 'tests\\envs\\test_hvac.py']"
+104977cc2d1c589c900b7159a25dd7a2d4c6f262,"fix(tests): register MockEnv termination function
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['9642a9d9ed778edddc9d36411f1272d8e3c7ec33'],False,['tests\\mock_env.py']
+b67b79536261650634e064061f55ea8dbb8f57f9,"fix(tests): correct slicing in MockEnv step
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['31986c546b9f5af75e9fc834750ea67d42a13dd6'],False,['tests\\mock_env.py']
+ea2ad86c117735d9c57dab42a7d8e6d49b3e6937,"fix(envs): clamp relative timestep to valid range
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['b67b79536261650634e064061f55ea8dbb8f57f9'],False,"['raylab\\envs\\environments\\hvac.py', 'raylab\\envs\\environments\\navigation.py', 'raylab\\envs\\environments\\reservoir.py']"
+8dce13f8d1ecdf9cabac3abca650d3acfa28837c,"fix(agents): remove model batch size check from ModelBasedTrainer
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['f91d738f367dc47f8e061d45e55e400d4c70b5c7'],False,"['raylab\\agents\\mbpo\\trainer.py', 'raylab\\agents\\model_based.py']"
+53f7dd35bb37b5695fe82ddb13be26e257f800e1,"fix(utils): return all non-empty samples
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['1c777d43fcce36bbfc49d3de02dc862c2a5ed574'],False,['raylab\\utils\\replay_buffer.py']
+f785affb9073c03fb15e781a50cd7bc0a794bce0,"fix(tests): expose source code for TorchScript
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['334c8f353f444bb23d5897cde1491bc7abfa6cca'],False,['tests\\pytorch\\nn\\distributions\\flows\\test_flow_distribution.py']
+2cc4cd0c6e8e976702a8c2b05943d0cfaf320d5a,"fix(pytorch): import custom activations
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['040033e7396a0bdcfa7cb3587b210db17a4d7828'],False,"['raylab\\pytorch\\nn\\modules\\__init__.py', 'raylab\\pytorch\\nn\\utils.py']"
+673bc9c5288b7a5a7fb09166f34499c9b95b3b42,"docs(pytorch): fix identation
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['2cc4cd0c6e8e976702a8c2b05943d0cfaf320d5a'],False,['raylab\\pytorch\\nn\\utils.py']
+44d48f1a43edc91dfa0e2a50faf862f720b3301c,"refactor(pytorch): fix deprecation warnings
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['673bc9c5288b7a5a7fb09166f34499c9b95b3b42'],False,['raylab\\pytorch\\optim\\radam.py']
+e0e9fdb84aa1480413f49dbe771bcd276f4868d5,"fix(tests): override all abstractmethods in DummyPolicy
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['cb9ca97c01097c2ac4de284ace96e35e550f7b1e'],False,['tests\\policy\\model_based\\test_sampling_mixin.py']
+cf38810779693ff5b77a0136694c3ef79e29234b,"fix(agents): get learner stats correctly
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['adec0ad9987c4604ffd124d0e125b616acf4717e'],False,"['raylab\\agents\\model_based.py', 'raylab\\agents\\off_policy.py']"
+b2cfe9aa95c20054331dbf91666d1a6956f63eeb,"fix(policy): deepcopy state before moving to numpy
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['cf38810779693ff5b77a0136694c3ef79e29234b'],False,['raylab\\policy\\torch_policy.py']
+65745f9a1c18b9f2d5bd6bc232461cca1eaa7c58,"fix(utils): cast samples to appropriate dtype
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['86f2bdeadbdf6242f83fe435e33ccfc046bd0419'],False,['raylab\\utils\\debug.py']
+ebd0022fbe76bccb658869b6c75f6b941765098e,"fix(agents): set optimizer attribute to sync global_vars
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['ceb7d602d69553602f7b043f310c3b2295fdbbdf'],False,['raylab\\agents\\trainer.py']
+880823019c892fb9d659e7501decf67270fd3843,"test(agents): fix Trainer call
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['a5cb06d82d741fa1f259199a48ab648bda5cee71'],False,['tests\\agents\\test_trainer.py']
+a5e13edabac79fc7c6af47b2d3e0939d276e0caf,"Merge tag 'v0.7.4' into develop
+
+Fix issue with global_vars not updating","['880823019c892fb9d659e7501decf67270fd3843', 'b7239bfba860b4c6533309611709d04aa3fb2697']",True,[]
+0d95e4491db999dff8a8ba47fb56f4a0121b8ada,"fix(agents): emulate PolicyOptimizer.stop
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['17480da8c6145223cbd1c0b40c694a50c83791c4'],False,['raylab\\agents\\trainer.py']
+8b3b404f3f4be39a835a596b14fe624e96fe0d10,"fix(agents): count steps before learning starts
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['0d95e4491db999dff8a8ba47fb56f4a0121b8ada'],False,"['raylab\\agents\\model_based.py', 'raylab\\agents\\off_policy.py']"
+9b5daab7b2742a85fe43b3a05542f7697a6242f0,"Merge tag 'v0.7.5' into develop
+
+Fix Trainer.stop and count timesteps before learning starts","['a5e13edabac79fc7c6af47b2d3e0939d276e0caf', '782458dcd44eccdef638276e7fdef4077573698d']",True,[]
+4b3648dee75a2ad7a2e3ade82473d43039838066,"fix(agents): setup sampling models only before model rollouts
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['a23604ae456583e60b1ab34a1c811204e25a5209'],False,['raylab\\agents\\model_based.py']
+e0844a865299353796221024f0bcaf4b5c541898,"fix(agents): avoid sending empty eval samples to policy
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['de724bd145631a0515e2906df7f9aaed81960e85'],False,['raylab\\agents\\model_based.py']
+8ea7da6f9e67b10a0d83ce4fc2076c80110e32e5,"fix(sop): return weights as dict
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['ec2426fe1ed2ebff62aa368a5080786e634639fd'],False,"['raylab\\agents\\sop\\policy.py', 'raylab\\policy\\torch_policy.py']"
+58d5e4c99112eaefc7a8bbc8a76e68029c73293b,"fix(pytorch): correct addcdiv signature
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['19b415c024f3319907bcae293467c4f5088df8f3'],False,['raylab\\pytorch\\optim\\radam.py']
+5914ce0f9a080ab66189546df35bd9d479b7d48c,"fix(policy): deepcopy state and recursively map to device
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['0a89c98d66e3bfbb9ef5cc5de74cec095388cff4'],False,['raylab\\policy\\torch_policy.py']
+9b52bd1e19590eee4dc8da520a06ba469940fea1,"fix(utils): ignore exp data keys with only NaN values
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['9076c1185c20e20b2617ecd3df9804e0077f3ab1'],False,['raylab\\utils\\exp_data.py']
+a94ea18b0893e2ea972b9cfe6205cc8fb9c85c00,"fix(losses): correct loss info key
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['d89de36d859aa6cfc2b024c32a69a5036fb46741'],False,['raylab\\losses\\cdq_learning.py']
+6aaa273d166272509447ac65743dbd1bc07ed784,"fix(losses): use target policy for next state
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['a94ea18b0893e2ea972b9cfe6205cc8fb9c85c00'],False,['raylab\\losses\\mage.py']
+2af2675714989fe1d6ed914db1c3cb2c41ed35b7,"fix(examples): add model sampling config to MBPO
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['6aa26e7c8ef22c2ce081a80f15b043e356662bbc'],False,['examples\\MBPO\\swingup.py']
+e3c982cb4406498585c31f1afeb945d204312436,"fix: add dataclasses-json to requirements
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['782458dcd44eccdef638276e7fdef4077573698d'],False,['setup.py']
+f88df1a8fe03db440677bb6ecc8d5b85d34e3c75,"fix(policy): map compute_actions output to cpu
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['f662e8788245ff4a046f3d813260cd9cfd0619ff'],False,['raylab\\policy\\torch_policy.py']
+e869fa4620bdb1bbeb70d6ce6aab456a23f78e62,"fix(mbpo): update default config
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['169ef9c46e037f3194d04dd7e4eaf47d43e67f6c'],False,"['raylab\\agents\\mbpo\\trainer.py', 'tests\\agents\\mbpo\\test_policy.py']"
+5f3a130ea6b7cd5daa33c95e73241f16f776b62a,"fix(losses): disable MAPO compilation
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['a46e2679e16123ccd72a37e5719fae2670d346a4'],False,['raylab\\losses\\mapo.py']
+ef022d434d4a124987b4a1ee3017afe75f3ae77c,"fix(losses): compile MAGE modules by key
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['5f3a130ea6b7cd5daa33c95e73241f16f776b62a'],False,['raylab\\losses\\mage.py']
+069c84570cee73b4eba99d77fc97a4d7bd228ab5,"fix(mapo): update loss env functions and add missing config
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['976c8583dde566bb782c19d30ebb721bd2db8ac4'],False,"['raylab\\agents\\mapo\\policy.py', 'raylab\\agents\\mapo\\trainer.py']"
+3d559dcc840f4ac9429c41e7d9fcbc4253f76583,"fix(mapo): compile all losses and set default config
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['d3d3e63a75afda3ed8fe65ca3fc13d8e1678c73c'],False,"['raylab\\agents\\mapo\\policy.py', 'raylab\\agents\\mapo\\trainer.py']"
+c6ece7f4dde88893d422d1eb9e6a9931703258fe,"fix(losses): minimize negative entropy
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['b66c9ffcafccba893af0bbc7f365e803cb5c7a88'],False,['raylab\\losses\\mapo.py']
+1379bbcb5f81ccd529f38af686bf0df79d321c13,"fix(ci): specify actions-poetry version
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['76783947c92fefe62398c28455f2b64908709789'],False,['.github\\workflows\\poetry-package.yml']
+1e32326adabeb0662a07e200c4bd2347614191e4,"fix(ci): specify full actions-poetry version
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['1379bbcb5f81ccd529f38af686bf0df79d321c13'],False,['.github\\workflows\\poetry-package.yml']
+9c3a2a2b50dae823a496c811a53f7cde6831f6ce,fix(readme): add links to badges,['16d149a4d3a6bc3446d85d73bbeb08be14b284ba'],False,['README.rst']
+dab90afa68a5ece06756af2c304a64aa3baf4bba,"fix(readme): remove whitespace from URL
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['242ebccbe8a38142f2647d1ca6eb4a0b0f6869c8'],False,['README.rst']
+12d06cc323dd5ca72cc22d2a24d2c97db0b33f91,"Merge tag 'v0.8.2' into develop
+
+Fix badges in readme","['c77c367e1f038760ca00aa07bca2a395b3728b5a', 'b67325df3dd3c44f4ca8fc515a8790d69536ddb5']",True,[]
+e0f2c5ea2c605ce704250c993cb5fefb04b4078e,"Merge tag 'v0.8.3' into develop
+
+Fix CD pipeline","['12d06cc323dd5ca72cc22d2a24d2c97db0b33f91', '4b7d4b08e8b47fdfc6121f4ded780076434be9eb']",True,[]
+b7f88d3240e20819e76bc67477a27ec3eea04f68,"fix(examples): disable true_model in MAPO
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['6a73f8874681fd24dc8a021acd85fa1abf502a29'],False,['examples\\MAPO\\swingup.py']
+a93c69884e8e8fc7b1d33a7708c9cd84d59846b6,"fix(deps): add opencv-python Gym requirement
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['0d6554df9167060742f2be934c7f03e440e59839'],False,"['poetry.lock', 'pyproject.toml']"
+c5962c8d1117691be14843d3d3f5a1c5cae460c9,"fix(policy): set pre-training eval epoch to -1
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['c5cabe00d922ae10b3c95a5e8a17941fa71087e2'],False,['raylab\\policy\\model_based\\training_mixin.py']
+e65a9dc86d27d450f436d12fe84b1ebc0743cc6a,"fix(policy): allow nonnegative improvement threshold
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['1de1946a96b70eb31fbde8b180a63ed646e9bc63'],False,['raylab\\policy\\model_based\\training_mixin.py']
+1730ce45423e107a65866404f5bf0fd5abf0534e,"fix(policy): assert threshold is either None or nonnegative
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['e65a9dc86d27d450f436d12fe84b1ebc0743cc6a'],False,['raylab\\policy\\model_based\\training_mixin.py']
+276b61e903cf7e4769e6dff17f7295eea04e37b1,"fix(policy): preserve gradient scaling by summing model losses
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['1730ce45423e107a65866404f5bf0fd5abf0534e'],False,['raylab\\policy\\model_based\\training_mixin.py']
+30775f36c528a3e442fb72db8fbd517000b817a8,"Merge tag 'v0.8.5' into develop
+
+\#### New Features
+* (policy): evaluate models before training
+* (policy): add EnvFnMixin hooks
+
+\#### Fixes
+* (policy): preserve gradient scaling by summing model losses
+* (policy): assert threshold is either None or nonnegative
+* (policy): allow nonnegative improvement threshold
+* (policy): set pre-training eval epoch to -1
+* (policy): log evaluator losses with eval prefix
+
+\#### Refactorings
+* (agents): use EnvFnMixin hooks","['d4d16b2dc637ade3976193185f46b7de867718f5', 'ec2d4b83949a9b3db9f35a04f86a4ace79fc57cc']",True,[]
+12c30b911f3ecd81d2dd48e638f95c4baf7da470,"fix(networks): set encoder defaults for actor and critic
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['1f19ec1625e5f1d4b4731b508ee2072707e2e51d'],False,"['raylab\\modules\\networks\\actor\\policy\\deterministic.py', 'raylab\\modules\\networks\\critic\\q_value.py', 'tests\\modules\\test_ddpg.py']"
+09abd40da78710e2809e1384ea7677054bfd51b8,"fix(networks): use deterministic actor spec
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['105a0d10e33e15592aba2756d02faf0c764577a9'],False,['raylab\\modules\\networks\\actor\\deterministic.py']
+dc18a0f3ba30eb65494a5cb4464ecc8f76880c41,"fix(networks): add Gaussian noise if requested
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['9bd649e4bbe45fb87e423a40fc8ee76a7bc7d201'],False,['raylab\\modules\\networks\\actor\\deterministic.py']
+459fdca8f31a84cdbcf1752b0e5fd6ad22a76316,"fix(modules): create and script new DDPG
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['ff62d98f2dc7c612540ffbb71529f40dd1db5a2f'],False,"['raylab\\modules\\ddpg.py', 'raylab\\modules\\networks\\actor\\policy\\deterministic.py', 'raylab\\modules\\networks\\critic\\action_value.py', 'raylab\\modules\\networks\\critic\\q_value.py']"
+d746d616e03bacb8183dfc1e3a009ee6ac51ef39,"fix(losses): replace module mixin imports
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['459fdca8f31a84cdbcf1752b0e5fd6ad22a76316'],False,"['raylab\\losses\\mle.py', 'raylab\\losses\\policy_gradient.py', 'raylab\\losses\\svg.py', 'tests\\losses\\conftest.py']"
+9ff72abbc43d09b3cc65ff5e62a0746bc4c1be77,"fix(networks): correctly pass arguments torch jit._fork
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['25fb7e48724696f5913d23c2d951a0dedc7cd287'],False,"['raylab\\modules\\networks\\critic\\q_value.py', 'raylab\\modules\\networks\\model\\stochastic\\ensemble.py', 'raylab\\modules\\networks\\model\\stochastic\\single.py', 'tests\\modules\\networks\\critic\\test_action_value.py']"
+b36be36b7da8d8bb9ad2faa2e2fbdea1e846365d,"fix(networks): pass `name` argument to initialize_
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['48f197c140da47f6757655fd2ace9ee8cf872771'],False,"['raylab\\modules\\networks\\actor\\policy\\deterministic.py', 'raylab\\modules\\networks\\actor\\policy\\stochastic.py', 'raylab\\modules\\networks\\critic\\q_value.py', 'raylab\\modules\\networks\\mlp.py', 'raylab\\modules\\networks\\model\\stochastic\\single.py']"
+7f9a929869b1714ac71783ecf9b57b1b374320e8,"chore(modules): rename modules and raise error for repeated names
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['82271ab9d041f997e9d842a4c6a80e377a30d90c'],False,"['raylab\\agents\\mage\\trainer.py', 'raylab\\agents\\mapo\\trainer.py', 'raylab\\agents\\mbpo\\trainer.py', 'raylab\\policy\\modules\\__init__.py', 'raylab\\policy\\modules\\catalog.py', 'raylab\\policy\\modules\\mb_ddpg.py', 'raylab\\policy\\modules\\mb_sac.py', 'raylab\\policy\\modules\\registry.py', 'raylab\\policy\\torch_policy.py']"
+9ec76f8163294ebeb517c522f63d438bbe44fa23,"test(mbpo): fix typo
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['7f9a929869b1714ac71783ecf9b57b1b374320e8'],False,['tests\\raylab\\agents\\mbpo\\test_trainer.py']
+ef492fb1e6ccd976f4f04fe0dcfcfde2ee5b99fd,"fix(agents): avoid permanently altering RLlib's Trainer cls variables
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['3ca06e1c74bcdd20d08d849051d829e4f495e15c'],False,['raylab\\agents\\trainer.py']
+fd726bc8d71e91b208a484ebd249141ec155f11b,"fix(tests): avoid overriding RLlib's 'optimizer' config
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['ef492fb1e6ccd976f4f04fe0dcfcfde2ee5b99fd'],False,['tests\\raylab\\agents\\test_trainer.py']
+ff6ffb3be612a2b894ffac032b5560ca265e9562,"fix(policy): handle default config merging with new trainer setup
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['fd726bc8d71e91b208a484ebd249141ec155f11b'],False,['raylab\\policy\\torch_policy.py']
+adad2aa4aa7076ee4039bd7a7cb92f69b0ec9254,"fix(agents): document RLlib common parameters
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['167611b42e229e6fe3ceaccd788232c6f3c1afe9'],False,['raylab\\agents\\config.py']
+57fb089b8244dee18aff54982174c18ba1083ae4,"Merge tag 'v0.10.0' into develop
+
+ #### New Features
+
+* add config & info decorators for trainers
+* add config info for RLlib common parameters
+* (agents): use config decorators for all agents
+* (cli): add raylab-info
+* (cli): add option to list all parameters of an agent
+
+ #### Fixes
+
+* (agents): document RLlib common parameters
+* (policy): handle default config merging with new trainer setup
+* (tests): avoid overriding RLlib's 'optimizer' config
+* (agents): avoid permanently altering RLlib's Trainer class variables
+
+ #### Refactorings
+
+* (agents): remove StatsTracker
+* (modules): add -v0 suffix to deprecated modules","['2f926519d8a788c2a9d66f6241a7ef8d37057a50', '8ec79d4e8fbebd857f67eeb4013f0a079081945d']",True,[]
+a397d5d705674578048bfc8adebdd9b66e217c86,"fix(agents): document ray-0.8.6 parameters
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['8c9b5f44365e1d9b45d8fec15f709e16beabea51'],False,['raylab\\agents\\config.py']
+8f976c4564b1b23595a2431651a699f32479b06e,"fix(agents): allow unknown subkeys for module and torch_optimizer
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['5f7d365ad5e118b0b54b539d632eeaa84217eb85'],False,['raylab\\agents\\trainer.py']
+afa39066bb7fd2bda06667509335b41c300c9742,"fix(examples): remove clipped_double_q option
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['8f976c4564b1b23595a2431651a699f32479b06e'],False,"['examples\\MAPO\\swingup.py', 'examples\\MBPO\\swingup.py']"
+e36dc4e54906cb0c9600cefd6780c6275fd60448,"fix(examples): substitute ModelBasedSAC for MBSAC
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['afa39066bb7fd2bda06667509335b41c300c9742'],False,"['examples\\MAPO\\swingup.py', 'examples\\MBPO\\swingup.py']"
+054f986fcff2fddbd37ab70cb9c9c6dfc6ab5a1b,"Merge tag 'v0.10.1' into develop
+
+#### Fixes
+
+* (agents): allow unknown subkeys in module and torch_optimizer
+* (examples): substitute ModelBasedSAC for MBSAC","['a3815b295f16379b99c9d2d6bb12418da0637481', '8148e5f5e1feee674ff3dac726c2d0191237ecce']",True,[]
+3c61f77ff64ad1f3e1eef8658ea2efa97e8f1669,"fix(deps): move poetry-version to package deps
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['abd4e9187cbf0ca484ce559a3560514e44b14e02'],False,"['poetry.lock', 'pyproject.toml']"
+626dc2b7ca08458697fd489e6ac7c256448e7a29,"Merge tag 'v0.10.2' into develop
+
+#### Fixes
+
+* (deps): move poetry-version to package deps","['054f986fcff2fddbd37ab70cb9c9c6dfc6ab5a1b', '61154dbbefe5090b1b026cbc8f8a37968e2a12d4']",True,[]
+7b2fe7842d088bf709c7db9bd2feffb035580bcd,"fix(agents): workaround rllib merge config functionality
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['e577a0c2426242e56664ad909923725b2b879066'],False,"['raylab\\agents\\trainer.py', 'tests\\raylab\\agents\\test_trainer.py']"
+7030dc7cad5a41930887d64536fee0dbe1eee343,"fix: rework pre-commit file matching
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['65bc41111a965792767de5a1fcec4e6651cb6bb5'],False,['.pre-commit-config.yaml']
+4f1750b8215aabe7e5cbce2275873a92def0428c,"fix: set default number of pylint threads to 1
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['7030dc7cad5a41930887d64536fee0dbe1eee343'],False,['pylintrc']
+4d7865de1ab5b38df7e9a6507ec5c507f88dc031,"fix(tests): set default pylint num jobs to 1
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['8fa895d2e5d1f4ff78fdc92665d8c6418da091c8'],False,['tests\\pylintrc']
+5d22444347372a3ead068d89a9abeda009a35654,"fix(sac): pass correct arguments to soft cdq learning
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['bd4efad4c90fc4eaa97eef4ed14025ea88d35e4b'],False,['raylab\\agents\\sac\\policy.py']
+3cbd50077d366feb7d4e253bfa5e630f0046ac87,"fix(naf): workaround CDQLearning expected argument types
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['5d22444347372a3ead068d89a9abeda009a35654'],False,['raylab\\agents\\naf\\policy.py']
+0b973edc2fc71918b506a51ff05c20b3e9fea785,"fix(envs): return initialized reward and termination functions
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['4e8e61ec7ef14bab5221eed6331558e8dd6b2dfa'],False,"['raylab\\envs\\rewards.py', 'raylab\\envs\\termination.py']"
+1cfdb1e1088b56a340ce9dcf2488aa274b3d354e,"fix(mapo): avoid overriding config with the same value
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['79b04deff1603474aae607b845a83887b178c208'],False,['raylab\\agents\\mapo\\trainer.py']
+b3a5b74739db561dd026f70724d77e0f534c5efa,"fix(losses): set _models attr for MAPO
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['1cfdb1e1088b56a340ce9dcf2488aa274b3d354e'],False,['raylab\\policy\\losses\\mapo.py']
+32061828fd06b13707133848cfb78e04d742d15a,"fix(losses): squeeze sample dimensions
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['b3a5b74739db561dd026f70724d77e0f534c5efa'],False,['raylab\\policy\\losses\\mage.py']
+fdacd36a87c1191fcd75f86aa78ce05958b9c32e,"fix(losses): complete DynaSoftCDQLearning
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['32061828fd06b13707133848cfb78e04d742d15a'],False,['raylab\\policy\\losses\\cdq_learning.py']
+3f9ab32033c498cba5dbc0f5f4b48681a2d26ccd,"fix(mbpo): avoid overriding config with the same value
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['fdacd36a87c1191fcd75f86aa78ce05958b9c32e'],False,['raylab\\agents\\mbpo\\trainer.py']
+15c5e1ecc74bf6f0586b5fca8041cbb59d87d6c5,"fix(losses): avoid infinite recursion on MAGE
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['86035f31b04e2caca7e8b0cc26fe1f9098dc4512'],False,['raylab\\policy\\losses\\mage.py']
+2b43a98fe2f61fb32a51842e9f56263ac001a401,"fix(tests): use retain_graph instead of retain_grad
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['ffac6985966f995587d1ecf318ec9a053dca3cf1'],False,['tests\\raylab\\policy\\modules\\model\\stochastic\\test_single.py']
+05131fc70ac9ae68d9049ff73f68bf41d63ebf7e,"fix(losses): call super init in DynaSoftCDQLearning
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['60aa8f419294824959ce22b7af97b2d945068075'],False,"['raylab\\policy\\losses\\cdq_learning.py', 'tests\\raylab\\policy\\losses\\test_cdq_learning.py']"
+0bf7a80aa5aafccea3aa6ea8637f3cb5e0a37121,"fix(dyna-sac): register default model training config
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['05131fc70ac9ae68d9049ff73f68bf41d63ebf7e'],False,['raylab\\agents\\sac\\dyna\\trainer.py']
+89eff0467faacab292df2491fd7c67a088db3564,"fix(dyna-sac): initialize loss functions
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['0bf7a80aa5aafccea3aa6ea8637f3cb5e0a37121'],False,"['raylab\\agents\\sac\\dyna\\policy.py', 'tests\\raylab\\agents\\sac\\dyna\\__init__.py', 'tests\\raylab\\agents\\sac\\dyna\\test_policy.py']"
+dacac48ca2823d57b7bfdfb19f13e42b421232b6,"fix(agents): always have a WorkerSet to get workers and policy
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['9381fe44d87a915a071261044b51f4135f5aa6ac'],False,['raylab\\agents\\trainer.py']
+8d589105f3281f10c015cb5480f8de10c4e8fd4f,"fix(agents): only log initial evaluation metrics once
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['d1d2fee63b498fc2519f8a7bd416b8def6e68d53'],False,['raylab\\agents\\trainer.py']
+fb81b4351fc8837140c9bffbdb674457fa2d583e,"Merge tag 'v0.10.6' into develop
+
+#### Fixes
+* (agents): only log initial evaluation metrics once","['dacac48ca2823d57b7bfdfb19f13e42b421232b6', 'ad15f95b54aa3158e45883be73c62ee36cd384a1']",True,[]
+1847b7adb827727d206ed2c69f31341cb1fbce95,"fix(tests): expect no evaluation_metrics attr in Trainer
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['bdd1e50f7bbba047549bb49679ca13ca337398e6'],False,['tests\\raylab\\agents\\test_trainer.py']
+f1d89775c321478c5b9ca0bbb947648d12a4dab2,"Merge tag 'v0.10.7' into develop
+
+Fix tests","['fb81b4351fc8837140c9bffbdb674457fa2d583e', '37041ec3f5bfbd74399d194d68348bed7f184953']",True,[]
+cdb100a1e94477a218804aef1c3f4b46ab913398,"fix(losses): keep dims when clipping dqda
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['3b91cb83763e96244e549278d10406ca4ab2b385'],False,['raylab\\policy\\losses\\policy_gradient.py']
+1d31039ee2b444791be8b68da5ed574f17214c24,"fix(utils): format incompatible exploration error
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['139c15e937bcbdab5a6c7ce6f51b339ae5d7c181'],False,['raylab\\utils\\exploration\\base.py']
+8bf15249cfb177ecdb1981c1ba0f8c4b3e8d313a,"fix(utils): set default Gaussian stddev for exploration
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['1d31039ee2b444791be8b68da5ed574f17214c24'],False,['raylab\\utils\\exploration\\gaussian_noise.py']
+125b4da1b523505c07c28af0631c3d171c39ea36,"fix(envs): add linear redundant module
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['914f5086a420fe50150fdd06b8a1190f55f42918'],False,['raylab\\envs\\wrappers\\linear_redundant.py']
+152c4c7509ae807668defb272615f549b20f1f33,"Merge tag 'v0.10.8' into develop
+
+#### New Features
+* (losses): add DPG from Acme
+* (sop): allow user to choose between DPG implementations
+* (agents): allow setting nested configs before intermediate values
+* (agents): add base SOP config decorator
+* (modules): port NAF to new module standard
+* (envs): add nonlinear redundant obs variables
+* (envs): add RNGMixin
+* (envs): add linear redundant obs variables
+* (envs): add correlated irrelevant obs variables
+* (envs): add random irrelevant obs variables
+* (utils): add StatDict type hint
+
+#### Fixes
+* (utils): set default Gaussian stddev for exploration
+* (utils): format incompatible exploration error
+
+#### Refactorings
+* (modules): merge MLP spec with mlp policy spec
+* (pytorch): remove fully connected builtin initialization
+* (agents): avoid mutable class attributes
+* (agents): use click-like interface for Trainer configuration
+* use TensorDict type hint
+* (losses): update type hints in SVG and MaximumEntropy
+* (losses): update type hints in policy gradients
+
+#### Others
+* (modules): remove updated old-style modules
+* (examples): update SOP scripts
+* (losses): remove old MAPO losses
+* (agents): use inspect.cleandoc to format config info
+* (agents): use `help` kwarg instead of `info` in toplevel config API","['9683afa9664c1e6a54098f60fe0126585871e05c', '74b547c27e29e2908bc6ef85d9f5567c6b9c6353']",True,[]
+058e8da16d1fbce8ce5b10663bd4f4ef481b1ad7,"fix(tests): set reproducible reward fn for MockEnv
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['1a5807aaa068ee057fae674854014332866026ae'],False,['tests\\mock_env.py']
+6013e27340d0f7887cb3a3aa96eaad99509cfdd2,"fix(agents): log learner stats as toplevel results
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['fba90f5eddcf788e1dfafd2269849777debc1163'],False,['raylab\\agents\\off_policy.py']
+89097f2b6de2bc9325d5d6355833c408116fe0b3,"Merge tag 'v0.11.1' into develop
+
+#### New Features
+* (agents): add options framework for Trainer configuration
+* (agents): add methods to retrieve option descriptions
+* (agents): add implicit dict option creation
+
+#### Fixes
+* (agents): log learner stats as toplevel results
+
+#### Refactorings
+* (agents): handle all trainer config setup in raylab","['c3e821c948a3e28f3ef9f646db6d80979262d9f1', '9e9694f2405a2c059909c0da895075978e0e492a']",True,[]
+db5e6361d23f7c5bdbe1a48de67ff947095daeff,"fix(agents): override trainer default_resource_request
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['1d0895eb383a09b88b0a4ab8755d2db5aac65806'],False,"['raylab\\agents\\compat.py', 'raylab\\agents\\trainer.py']"
+b9d12c32597850818a4b531b6791e87cf9dff6bb,"Merge tag 'v0.11.3' into develop
+
+### Fixes
+* (agents): override trainer default_resource_request","['55b3e3d1fa4f75d05a89f2f25d5b6819b7bd1f17', 'b19df40fe40ec4267b5c618361825a04e63f092c']",True,[]
+3c9de3fc578b07926c55112fa7ef5027516bff41,"fix(envs): set termination_fn in IrrelevantRedundantMixin
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['87923b315c34d31a2e3ebf7d62c623f798654f44'],False,['raylab\\envs\\wrappers\\mixins.py']
+fac12f13819c7c2d2409cf802cd7da67b4af58c5,"fix(tests): expect dynamics_fn attr in ReservoirEnv
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['c4ff085ce3f482ea2762d49ee72c4c43b7d964a7'],False,['tests\\raylab\\envs\\environments\\test_reservoir.py']
+9238ee79884356375c74466c10dd54644eb1282d,"Merge tag 'v0.11.4' into develop
+
+#### New Features
+* (envs): add termination_fn to ReservoirEnv
+* (envs): add termination_fn to NavigationEnv
+* (envs): wrap env functions in IrrelevantRedundantMixin
+* (envs): expose register_env in base package
+
+#### Fixes
+* (envs): set termination_fn in IrrelevantRedundantMixin
+* (tests): expect dynamics_fn attr in ReservoirEnv
+
+#### Refactorings
+* (policy): organize unimplemented Policy API","['3605ec597aac7f40f5c4e77d8b8f87ddc943c3a4', 'bf45529fe25390c2e2999c6b8fa34097c1301a1f']",True,[]
+4ad8a3a04f4691a25acefc564c61d99e204ecc25,"fix(policy): enable grad computation in model evaluation
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['dc9a90b8ca694802d00c5dfc3aadf288d8d2be3d'],False,['raylab\\policy\\model_based\\training_mixin.py']
+babc0bf1a2ea057ecffacfa5a80b57be7e71520b,"Merge tag 'v0.11.10' into develop
+
+#### Fixes
+* (policy): enable grad computation in model evaluation
+
+#### Others
+* (policy): unfreeze training mixin dataclasses","['22eecf67b68eb3b42efa0ed14b71adcc95550cce', 'c6734a1cef75eb0c759c6b2b683fcfa9ef89e7fa']",True,[]
+7030e0c57efe64dca081d3e3a2b844430e68ff8b,"fix(ci): use pip to install pytest
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['8b451357980064919883fd3832630556027eadf5'],False,['.github\\workflows\\poetry-package.yml']
+d396fe46691602c2ea6cae4c06a3da7ca0223192,"Merge tag 'v0.11.13' into develop
+
+### Fixes
+* (ci): use pip to install pytest","['ba71e906ca6ec0f0f4ab74b289cbef90427304de', 'c6d1180ee51d94a466ef2da24c0e367c08f9647a']",True,[]
+a5cc505bb6884e3acd5f6d1242a4f50693fb046d,"fix(ci): install gym-cartpole-swingup
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['7e7fd014a606384dd79b80466b63dc7118af4bee'],False,['.github\\workflows\\poetry-package.yml']
+178529cbfb75300698882737df413e35f5c50005,"Merge tag 'v0.11.14' into develop
+
+### Fixes
+* (ci): install gym-cartpole-swingup","['d396fe46691602c2ea6cae4c06a3da7ca0223192', '14e28ef4e99f7a660600e39828a04a799e70e16e']",True,[]
+e0b71e1f19f5631f2604828598dfe447832097ac,"fix(agents): time model and policy in dyna trainer
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['e2d04b2d4484eb4a067de9c3abff8533a4087e90'],False,['raylab\\agents\\model_based.py']
+7a0b858019760514745f762ea529cfb156a9bc91,"Merge tag 'v0.11.17' into develop
+
+### Fixes
+* (agents): time model and policy in dyna trainer","['aaed17dc0607c44e74145011f2e340cbb8f3b2fc', '3cc860f53feedb61b8a21dfcc2c924371244397d']",True,[]
+836eea5fd77a88b43b0be2a4a3d51ae34d83d3b1,"fix(ci): use separate step for poetry env info
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['8a5547f5245ec9c1e381b815e28d2615bf1ccdbc'],False,['.github\\workflows\\poetry-package.yml']
+36f53f3d1338183e592b12ebc61fe908f2822b8f,"fix(ci): attempt to cache pip packages
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['836eea5fd77a88b43b0be2a4a3d51ae34d83d3b1'],False,['.github\\workflows\\poetry-package.yml']
+5d42145a6f636a936a4d9f60270d9f5ccbfe815c,"fix(agents): only set default to dict if None provided
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['b024b57abc20e811a4f0aad055444bfcc8bcd208'],False,['raylab\\agents\\options.py']
+cdf7f53ebcf85c98069d01de6348772422eb7168,"Merge tag 'v0.11.20' into develop
+
+#### New Features
+* (agents): add model warmup for model-based algs
+
+#### Fixes
+* (agents): only set default to dict if None provided","['5d42145a6f636a936a4d9f60270d9f5ccbfe815c', '4bd94ee35abdae0b6aec577199613ebf70c75885']",True,[]
+26393fbc05aefb81e05b5ffe0cba8fe5de26b6f8,"fix(agents): set warmup default to False
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['3054c369c1c105946158123c5b9a722fa983a1fd'],False,['raylab\\agents\\model_based.py']
+6a3a1614a75c33b4d5f030e7105517882beffc4e,"Merge tag 'v0.11.22' into develop
+
+#### Fixes
+* (agents): set warmup default to False","['26393fbc05aefb81e05b5ffe0cba8fe5de26b6f8', '3aaf4a953c2facd722b856085043d240dca67358']",True,[]
+812e6caabebfc1b4c6431a70aad9768623c77be5,"test(policy): fix new mocks
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['ee1d701a2ac5163fa4c08fd15c46329d9bacb1f9'],False,['tests\\raylab\\policy\\model_based\\test_training_mixin.py']
+2e0125a2a5067a18f0109808dd11308bc1c31ce9,"feat(modules): fix model min_ and max_logvar
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['a4b3ace5a121ef1a7e26714561931fe87b648c24'],False,['raylab\\policy\\modules\\model\\stochastic\\single.py']
+ff0480623dce300d9c5f779992ecda71b96895ae,"refactor(modules): add option to fix logvar bounds for bounds
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['2e0125a2a5067a18f0109808dd11308bc1c31ce9'],False,['raylab\\policy\\modules\\model\\stochastic\\single.py']
+f796fa52a2d3b7014a3c81103b73fd76aaab1738,"Merge tag 'v0.11.27' into develop
+
+#### New Features
+* (policy): log model grad steps and early stop
+* (modules): fix model min_ and max_logvar
+* (modules): add option to fix logvar bounds for models
+
+#### Refactorings
+* (policy): move spec dependent model training methods
+* (policy): move spec dependent model training methods
+* (policy): use / separator for train and eval info","['b54b7c7c1b40c26ceef8bf03b04cea7a97c8e375', 'b37dc9386934a1ab08c695ddc3d325865a8cb2f8']",True,[]
+7c56e59bba5c9f7d577ff2079c53c7c37093c3fe,"feat(mapo): compute action grad squared error by default
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['1a5767f1ce3610839e9229254b86ad0883f11eef'],False,"['raylab\\agents\\mapo\\policy.py', 'raylab\\agents\\mapo\\trainer.py', 'raylab\\policy\\losses\\paml.py']"
+8de0720440c1e29ab61083ca0c9be12ee1df6540,"Merge tag 'v0.11.28' into develop
+
+#### New Features
+* (mapo): compute action grad squared error by default","['7c56e59bba5c9f7d577ff2079c53c7c37093c3fe', '8a517e75ffded84111a7ed76d82938ef079e48d9']",True,[]
+cf072d586b62aa200bd5a0a7fd86b2647b745168,"fix(tests): pass config to policy
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['69257079c55d3a56062ca74459ae9dc74e233daf'],False,['tests\\raylab\\agents\\mapo\\plus\\test_policy.py']
+dfe4e27164b9670cf31ae8b2964c6e04d43ebacb,"fix(mapo): set critic loss env functions
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['cf072d586b62aa200bd5a0a7fd86b2647b745168'],False,"['raylab\\agents\\mapo\\plus\\policy.py', 'tests\\raylab\\agents\\test_registry.py']"
+261d4af7b8f92241eed66429aa2b3a24e8620331,"fix(mapo): set dyna_q option under losses/
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['0dcd60ee8b04c14ef7043fa4845e9ce329ebdae8'],False,['raylab\\agents\\mapo\\mle\\trainer.py']
+2485005eb88ce05d4f8dccf1a6887d12c40c82a3,"fix(losses): use new SME api
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['20e9fa27ee749abe85fbc17fb92d1e4f430dc56b'],False,"['raylab\\policy\\losses\\mle.py', 'raylab\\policy\\losses\\paml.py', 'tests\\raylab\\policy\\losses\\test_mapo.py']"
+64f696ff460c98a7c44e06fbfe9f6d64ecd338d1,"fix(losses): remove typo in MaximumLikelihood
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['2485005eb88ce05d4f8dccf1a6887d12c40c82a3'],False,['raylab\\policy\\losses\\mle.py']
+eba1127e9557c7a92b7424bcaeb7da4c6329ead7,"fix(losses): script models in SPAML
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['5a264a2d8256551f4ddd1730dd0fad14c7da4341'],False,"['raylab\\policy\\losses\\paml.py', 'tests\\raylab\\policy\\losses\\test_paml.py']"
+cdec060ebff15657726a58c065eedd4a45b09340,"fix(losses): script policy in SPAML
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['eba1127e9557c7a92b7424bcaeb7da4c6329ead7'],False,['raylab\\policy\\losses\\paml.py']
+80f7741a64fd26d79467b33e7d73160026107d92,"test(pytorch): skip checks related to PyTorch issue #42459
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['67f806480a52dacf0dca65a4c1d5e2517eda9e34'],False,['tests\\raylab\\pytorch\\nn\\modules\\test_fully_connected.py']
+42ef8e6b82f353f3e26594f5268daedbef5ef99e,"test(modules): skip checks related to PyTorch issue #42459
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['2d150fb435122524c9ec1377259259d0ff424031'],False,['tests\\raylab\\policy\\modules\\model\\stochastic\\test_single.py']
+a56164030c69a335b0524ee24b45c872a1c9bd1e,"fix(losses): disable module scripting in SPAML
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['42ef8e6b82f353f3e26594f5268daedbef5ef99e'],False,['raylab\\policy\\losses\\paml.py']
+630f0217af668f9635492766d7b63aef8e780ae4,"test(losses): skip checks related to PyTorch issue #42459
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['873a5b774999c2be7342c7a2fa43a78980ad4256'],False,['tests\\raylab\\policy\\losses\\test_mage.py']
+72dbe49ef8c1455b675f764f13ace4e19fcb5d06,"fix(losses): disable module scripting in MAGE
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['630f0217af668f9635492766d7b63aef8e780ae4'],False,['raylab\\policy\\losses\\mage.py']
+58a47b5e3905da4195be62052946faf93ebf7f4d,"Merge tag 'v0.11.29' into develop
+
+#### New Features
+* (models): listify stochastic model ensembles outputs
+
+#### Fixes
+* (losses): disable module scripting in MAGE
+* (losses): disable module scripting in SPAML
+* (losses): remove typo in MaximumLikelihood
+* (losses): use new SME api
+* (mapo): set dyna_q option under losses/
+* (mapo): set critic loss env functions
+* (tests): pass config to policy
+
+#### Refactorings
+* (losses): annotate tensor shapes in MAGE
+* (losses): remove 'model_samples' option from UniformModelPriorMixin
+* (modules): use public fork and wait torchscript funcs
+* (modules): import public fork and wait torchscript funcs
+* (modules): rename StochasticModelEnsemble to SME
+* (modules): push input_dependent_scale to network spec for models
+* (modules): use TensorDict type hint
+
+#### Others
+* (losses): compute squared 2-norm in MAGE
+* (losses): make pathwise derivative the default in UniformModelPriorMixin
+* (losses): skip checks related to PyTorch issue #42459
+* (modules): skip checks related to PyTorch issue #42459
+* (pytorch): skip checks related to PyTorch issue #42459","['469208956504dccb5fb93bc68fcb575bdf0eb9e4', '0a7b0b3828aa56e27fdaa8eca94719ad51f3437a']",True,[]
+465ef324e009dda4ede3a0333331d15d89edb1c0,"fix(modules): unify model API for normal/residual, single/ensemble
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['08183c0f4cd27d55b63f2f59d52c1fa1dcd99b03'],False,"['raylab\\agents\\svg\\one\\policy.py', 'raylab\\agents\\svg\\soft\\policy.py', 'raylab\\policy\\losses\\mixins.py', 'raylab\\policy\\losses\\mle.py', 'raylab\\policy\\losses\\svg.py', 'raylab\\policy\\model_based\\sampling_mixin.py', 'raylab\\policy\\modules\\model\\stochastic\\ensemble.py', 'raylab\\policy\\modules\\model\\stochastic\\single.py', 'raylab\\policy\\modules\\v0\\catalog.py', 'raylab\\policy\\modules\\v0\\mixins\\__init__.py', 'raylab\\policy\\modules\\v0\\mixins\\normalizing_flow_actor_mixin.py', 'raylab\\policy\\modules\\v0\\mixins\\normalizing_flow_model_mixin.py', 'raylab\\policy\\modules\\v0\\mixins\\stochastic_model_mixin.py', 'raylab\\policy\\modules\\v0\\mixins\\svg_model_mixin.py', 'raylab\\policy\\modules\\v0\\nfmbrl.py', 'raylab\\policy\\modules\\v0\\off_policy_nfac.py', 'raylab\\policy\\modules\\v0\\on_policy_nfac.py', 'raylab\\policy\\modules\\v0\\svg_realnvp_actor.py', 'raylab\\policy\\modules\\v0\\trpo_tang2018.py', 'tests\\raylab\\policy\\modules\\model\\stochastic\\test_ensemble.py', 'tests\\raylab\\policy\\modules\\model\\stochastic\\test_single.py', 'tests\\raylab\\policy\\modules\\v0\\test_normalizing_flow_actor_mixin.py', 'tests\\raylab\\policy\\modules\\v0\\test_normalizing_flow_model_mixin.py', 'tests\\raylab\\policy\\modules\\v0\\test_trpo_extensions.py']"
+ec12ca5f98a0c77aff2d2eab28b3d2b443d02ee9,"Merge tag 'v0.12.2' into develop
+
+#### Fixes
+* (modules): unify model API for normal/residual, single/ensemble
+
+#### Refactorings
+* (modules): remove protected-access pylint directive
+* (modules): use public fork and wait torchscript funcs","['465ef324e009dda4ede3a0333331d15d89edb1c0', '3cf3f49ac737fe1ebb5291bb4d62d021201f69f4']",True,[]
+844518103d19d2c16ca4c0c0b558674414f08f8e,"fix(options): use new deep_update signature
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['bfc859c44fce873e634905f47410233f869d0361'],False,['raylab\\agents\\options.py']
+802bd258309b7262a7a8f5ff4c7538144ee79a6f,"fix: use new deep_update signature
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['9aeccd558a72d04afabfb5d48e5601accadd9da2'],False,"['raylab\\agents\\acktr\\policy.py', 'raylab\\policy\\modules\\v0\\ddpg_module.py', 'raylab\\policy\\modules\\v0\\mixins\\action_value_mixin.py', 'raylab\\policy\\modules\\v0\\mixins\\deterministic_actor_mixin.py', 'raylab\\policy\\modules\\v0\\mixins\\state_value_mixin.py', 'raylab\\policy\\modules\\v0\\mixins\\stochastic_actor_mixin.py', 'raylab\\policy\\modules\\v0\\mixins\\stochastic_model_mixin.py', 'raylab\\policy\\modules\\v0\\model_based_ddpg.py', 'raylab\\policy\\modules\\v0\\on_policy_actor_critic.py', 'raylab\\policy\\modules\\v0\\sac_module.py', 'raylab\\policy\\modules\\v0\\svg_module.py', 'raylab\\policy\\torch_policy.py', 'raylab\\utils\\dictionaries.py']"
+e5fd9fa62f5dedefe469609a831a871b65e0e0c4,"fix(utils): implement replay buffer len
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['802bd258309b7262a7a8f5ff4c7538144ee79a6f'],False,['raylab\\utils\\replay_buffer.py']
+b400e85c3b817f29a22db7c41bf3fb8186c82daf,"fix(options): document new ray-0.8.7 config keys
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['e5fd9fa62f5dedefe469609a831a871b65e0e0c4'],False,['raylab\\agents\\options.py']
+2789f6d0cdf4e2302a334c3c86824e21ea071c51,"fix(agents): set timer to proper timer instance
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['9b88fa1d6d172a025f1a1bb581eb73c78aa6a007'],False,['raylab\\agents\\model_based.py']
+431d3dbf92b58f9914e3d0ff717bb361be940724,"fix(agents): update num steps samples in model-based agents
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['be496081fbc23c205148520468d3b346cb32aaf3'],False,"['raylab\\agents\\model_based.py', 'tests\\raylab\\agents\\test_model_based.py']"
+6c6193c1ec501ad9186a241e1a6f25ff539282f3,"Merge tag 'v0.13.2' into develop
+
+#### New Features
+* (envs): add Hopper-v3 reward and termination fns
+
+#### Fixes
+* (agents): update num steps samples in model-based agents","['431d3dbf92b58f9914e3d0ff717bb361be940724', '941340a5362e69374df5c02d2abce0ef3db55885']",True,[]
+d850a4c7158b8d262b2b17a2b565fb06c3ab5f08,"fix(envs): call is_healthy in Hopper-v3's termination
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['6c6193c1ec501ad9186a241e1a6f25ff539282f3'],False,['raylab\\envs\\termination.py']
+d61a104f35116912e6428f93bb1dd56af2aa7311,"Merge tag 'v0.13.3' into develop
+
+#### Fixes
+* (envs): call is_healthy in Hopper-v3's termination","['d850a4c7158b8d262b2b17a2b565fb06c3ab5f08', 'a37f103fb5a3c6c642976fd6dcdba87edaa4cb80']",True,[]
+ccb02efa118029240458c4dd0c44706928396e8c,"fix(envs): set necessary attributes for Hopper-v3 termination
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['76aa254b6ac13cff415a159a8bc8b6d9222fbc0d'],False,['raylab\\envs\\termination.py']
+9169a569f3ae7e93b8e700f66e08866eeecf6d80,"fix(envs): invert order of positions
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['ccb02efa118029240458c4dd0c44706928396e8c'],False,"['raylab\\envs\\rewards.py', 'tests\\raylab\\envs\\test_rewards.py']"
+acb00510cf638674f969db51e675a7133660039e,"Merge tag 'v0.13.4' into develop
+
+#### Fixes
+* (envs): invert order of positions
+* (envs): set necessary attributes for Hopper-v3 termination
+
+#### Others
+* (agents): check off-policy and model-based train steps","['9169a569f3ae7e93b8e700f66e08866eeecf6d80', 'ccd64e53978d6a4a8bd358e656eb968acae9ca3b']",True,[]
+b85d5dd883dcb49f5fd4575686aa92495f0be6f9,"fix(agents): log wandb last
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['acb00510cf638674f969db51e675a7133660039e'],False,['raylab\\agents\\trainer.py']
+66000ccd573480606f869e8f742be3e659202ed8,"Merge tag 'v0.13.5' into develop
+
+#### Fixes
+* (agents): log wandb last","['b85d5dd883dcb49f5fd4575686aa92495f0be6f9', '1c792497a640165d720f0514ee02255e21ea753e']",True,[]
+0590cf135e148dc8e4b5289352894c2742749ea8,"fix(agents): use new model-based mixin imports
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['d214e13dffe621e3ad7e96f7f84255c6b9dc5f40'],False,"['raylab\\agents\\mage\\trainer.py', 'tests\\raylab\\policy\\model_based\\test_envfn.py', 'tests\\raylab\\policy\\model_based\\test_sampling.py', 'tests\\raylab\\policy\\model_based\\test_training.py']"
+676983e89d380ffde6d3c443dcf8a83645d2dd22,"fix(agents): use new model-based mixin imports
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['0590cf135e148dc8e4b5289352894c2742749ea8'],False,['raylab\\agents\\mbpo\\trainer.py']
+03719844b051ba936de9fde0818d14f414875ff0,"fix(tests): pass policy config in model-based training
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['2af4145494c4a372706b43cf2da4035973f3c3ab'],False,"['tests\\raylab\\policy\\model_based\\test_envfn.py', 'tests\\raylab\\policy\\model_based\\test_lightning.py', 'tests\\raylab\\policy\\model_based\\test_sampling.py', 'tests\\raylab\\policy\\model_based\\test_training.py']"
+a234b73e5ac3032222dd777e8c8d149a793d9ebf,"fix(tests): pass policy config in model-based training
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['03719844b051ba936de9fde0818d14f414875ff0'],False,['tests\\raylab\\policy\\model_based\\test_lightning.py']
+7a231b7e51dc96c641b922511c0040ab15f5dcbf,"fix(cli): import options from raylab
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['79a014dfb365b538478f85cf92e17d8753958745'],False,['raylab\\cli\\info.py']
+68cf18565a2f883327a492e69d5c278e9e90c96c,"fix(tests): update policy cls fixture
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['3efcb8323fd845f4219ba23177f2b9ed622c6a06'],False,"['tests\\raylab\\agents\\test_registry.py', 'tests\\raylab\\agents\\test_trainer.py']"
+698fdca1f332eeda8c5c93c901864f439a7179bb,"fix(policy): recover model warmup behavior
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['004ba6d4dc114c5ce5949d94fa08498ce2dd6531'],False,"['raylab\\agents\\mbpo\\policy.py', 'raylab\\policy\\model_based\\policy.py']"
+6cdc30d3358045e0026da87850f6a1c89620c8b2,"fix(policy): restore model when early stopping
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['c972f3a1fbf25ebb1df4c1ca3ca48fc74f9fb498'],False,"['raylab\\policy\\model_based\\lightning.py', 'tests\\raylab\\policy\\model_based\\test_lightning.py']"
+e368ff498c234a21cfc9fd0a327ce8372dc782e5,"fix(agents): add default resource request for trainers
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['49b6b3ae16a0f5dcd3b92a9ee73a2448f6aedb13'],False,['raylab\\agents\\trainer.py']
+0339458acffe58835e6379231322e83a6102594f,"fix(mage): keep policy delay default of 2
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['288dcda3edf2aec356b335cb659b39ec24faed4c'],False,['raylab\\agents\\mage\\policy.py']
+94003117fdfa9009e9b674f29c55439b3ef9867f,"fix(mage): access 'optimizer' key in config
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['0339458acffe58835e6379231322e83a6102594f'],False,['raylab\\agents\\mage\\policy.py']
+e20bac39fa234038279d600b50a41862df9038d1,"fix: use new NumpyReplayBuffer API
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['5018ea4c64d648162afc5bffa2d59fa757b0fd62'],False,"['raylab\\agents\\mbpo\\policy.py', 'raylab\\policy\\model_based\\lightning.py', 'tests\\raylab\\agents\\mage\\test_policy.py', 'tests\\raylab\\policy\\model_based\\test_lightning.py']"
+ac43090b6f8a784775d06be18157f2ac20fe6d22,"fix(utils): take obs stats along batch dim
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['3bf34d6358226ae6ac3dac2d6f7422b6cc7c1c5e'],False,['raylab\\utils\\replay_buffer.py']
+505d0a57e26d172052d2336411ee95f7946305ab,"fix(utils): return normalized obs and next obs
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['32b823bd685ef9391e6520a07da5de226009e06e'],False,"['raylab\\utils\\replay_buffer.py', 'tests\\raylab\\utils\\test_replay.py']"
+50ff9e397bf7ca176d104ef2766a7577af6e9a8c,"fix(envs): avoid conflicting method inheritance in single precision
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['964b079778c122b7ffa93ad60fab0eb8b327fccb'],False,['raylab\\envs\\wrappers\\single_precision.py']
+6bf7a24d226516c2f268e080188c08434b9af00d,"Merge tag 'v0.14.1' into develop
+
+#### New Features
+* (policy): use experience replay datamodule with lightning
+* (policy): turn LightningModelMixin into a standalone class
+* (policy): substitute LightningModelMixin for ModelTrainingMixin
+* (policy): save individual model losses for later
+* (policy): allow no holdout set
+* (policy): log learner stats
+* (agents): log number of grad steps in SOP and TD3
+* (agents): add TD3
+* (envs): add SinglePrecision wrapper
+* (modules): add SOP
+* (modules): add MAGE
+* (mbpo): time data virtual rollouts
+* (utils): add getitem and obs normalization to NumpyReplayBuffer
+* (examples): add MAGE on Pusher-v2
+
+#### Fixes
+* (agents): add default resource request for trainers
+* (policy): restore model when early stopping
+
+#### Others
+* (policy): test on train set if val not present
+* (modules): assert target critics are disjoint and freeze params
+* (mage): set model warmup equal to training
+* (mage): set defaults according to paper
+* (examples): update SAC, SOP and TD3 defaults on cheetah
+* (examples): update SAC, SOP and TD3 defaults on walker2d
+* (agents): remove train_batch_size from off-policy execution plan
+* (deps): remove 'dashboard' extra from ray","['50ff9e397bf7ca176d104ef2766a7577af6e9a8c', '4ebf2c56591c3ff2f88ca4e63b09ab4dd4be5e6e']",True,[]
+a549230f29598f07f12bd6f68138b9643dcd5dcb,"chore(losses): fix typo in docstring
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['8c85237ccada89e70514a1201b21348fc7e7b1a5'],False,['raylab\\policy\\losses\\mixins.py']
+3e25193493cfd31e4c8a5a84e55ce2e1a6199cc1,"chore(policy): fix typo in docstring
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['c7b07b5450c8691a6a11426eb321d593984c9e34'],False,['raylab\\policy\\model_based\\lightning.py']
+2de919376c9ad4011cb186f5dd6144389732ce66,"Merge tag 'v0.14.3' into develop
+
+#### Refactorings
+* rename annotations to types
+
+#### Others
+* run poetry update
+* (policy): fix typo in docstring
+* (losses): fix typo in docstring","['ed43478b7b589f21d2fd4359218b90bd04705926', 'b5d3e147d987b0ad6f54cf578623e7bf12b4a990']",True,[]
+916192191e713dbe8d3053fadc6ce33f577b7b7e,"fix(utils): avoid circular slices
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['913ac8510868054d1d03cf626533c99dcf602196'],False,['raylab\\utils\\replay_buffer.py']
+03dbb1481f40947b8e104398b27c5720cec41ac6,"fix(utils): calculate end idx for full buffer
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['916192191e713dbe8d3053fadc6ce33f577b7b7e'],False,['raylab\\utils\\replay_buffer.py']
+614a1adc5ee55725a881c40784d245480c5f5f75,"Merge tag 'v0.14.4' into develop
+
+#### New Features
+* (policy): add option decorator for model-based mixin
+* (policy): add option decorator for off-policy mixin
+* (losses): add method to unpack batch for losses
+
+#### Fixes
+* (utils): calculate end idx for full buffer
+* (utils): avoid circular slices
+
+#### Others
+* (policy): add parenthesis around modulus
+* (policy): check number of learn calls
+* (policy): check model update interval","['f1b3a053e0c01ab47c3826bc511c866cae60ef54', '10a2ee748f10cfbbc69139164c742fb80a4833fe']",True,[]
+6cc6f232d71c7e7e759d28f3b7f01cabd5ee36bd,"fix(losses): unpack batch keys
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['0adaffba9e8d1673567d3a3c6fd49953dbb054a0'],False,['raylab\\policy\\losses\\abstract.py']
+6f8ddc161a191e9df0c7cd02e1e0f2b768e7ddd8,"fix(svg): remove manual entropy coeff update
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['6cc6f232d71c7e7e759d28f3b7f01cabd5ee36bd'],False,"['raylab\\agents\\svg\\soft\\policy.py', 'raylab\\policy\\losses\\isfv_iteration.py']"
+90dca9e25b9e291ebc51afdf22a9865343c48003,"Merge tag 'v0.14.7' into develop
+
+#### New Features
+* (envs): add LQR solver
+* (envs): make LQR TorchScript compatible
+
+#### Fixes
+* (svg): remove manual entropy coeff update
+
+#### Refactorings
+* (envs): reserve keyword 'kwargs' for env config
+* (svg): move common options to base SVG policy
+* (svg): move common options to base SVG policy
+* (tests): move svg tests to losses
+
+#### Others
+* (agents): set trainer exploration config default to None","['eea7d49b18e9ebda2ac0d4124b96ba6b001c169f', 'c5e862334dc1f29a09b42286ddcc40e72c6eb3a2']",True,[]
+04537c6eb01508d99eda653c14a1e150bdeee151,"fix(policy): normalize inputs to compute actions if needed
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['fff8bbfb206a04cdbddfa6c52d3f0a928c3d82fc'],False,"['raylab\\policy\\off_policy.py', 'raylab\\policy\\torch_policy.py', 'raylab\\utils\\replay_buffer.py']"
+639414037b32de4284929daa77f022d8e6a8c6a7,"fix(policy): return super call result
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['7821a90b2fb2873466b37b7b1d6eb9c0682f9c6b'],False,['raylab\\policy\\off_policy.py']
+6defb7e56ca5bf88bf2b8bd2ec73afe83e2eb65f,"fix(utils): disable normalization if replay is empty
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['639414037b32de4284929daa77f022d8e6a8c6a7'],False,"['raylab\\utils\\replay_buffer.py', 'tests\\raylab\\utils\\test_replay.py']"
+3bbdd0f7828d9b41b1de7a66b6102bb26002c914,"fix: remove standard scaler use
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['b8319b9829a24999d4a4f9db5ae6ba8fb419ce55'],False,"['raylab\\policy\\modules\\mage.py', 'raylab\\policy\\modules\\model\\stochastic\\single.py', 'raylab\\policy\\modules\\model\\stochastic\\svg.py', 'raylab\\policy\\modules\\sop.py', 'tests\\raylab\\policy\\modules\\model\\stochastic\\test_ensemble.py', 'tests\\raylab\\policy\\modules\\model\\stochastic\\test_single.py']"
+1963afb675f9748e320a819b26e601ef3708effb,"fix(utils): ensure obs to be normalized is an array
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['83115b2325c4a178a109c53c85011308ae2e82b0'],False,['raylab\\utils\\replay_buffer.py']
+2e3b507678ca31e7544f537e376256bc5d5b1019,"fix(envs): sample integer dims for LQR
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['4b0ee2ae4df0798f25f29f39c9cb352fdb3f5060'],False,['raylab\\envs\\environments\\lqr\\generators.py']
+c7b34f378bf3e50946b919f05123ca84ec8e19cc,"fix(envs): make solver scriptable
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['c0f4b1fadc076bdd72edfc334d0b16316039f3f2'],False,['raylab\\envs\\environments\\lqr\\solver.py']
+7a3e32ef4faf3b5d555160700de2fdb9219189c4,"fix(envs): make all LQR generators pass tests
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['40c08555a2c3ee95e0a85dc08b19042f9d07cd34'],False,['raylab\\envs\\environments\\lqr\\generators.py']
+eb53f9811f24f61de265512b63a3a6d7ed468acb,"Merge tag 'v0.14.8' into develop
+
+#### New Features
+* (policy): save replay state along with weights
+* (agents): evaluate before learning if requested
+* (modules): add LayerNormMLP
+* (envs): add Box-DDP paper LQR generator
+* (envs): add random LQR generators from backpropagation-planning
+
+#### Fixes
+* (policy): normalize inputs to compute actions if needed
+* (utils): ensure obs to be normalized is an array
+* (utils): disable normalization if replay is empty
+
+#### Refactorings
+* (examples): rename SoftAC folder to SAC
+
+#### Others
+* (policy): remove standard scaler from state-action mlp
+* (policy): add type annotations to compute_actions
+* (utils): update replay normalization
+* (utils): remove add_row
+* (utils): avoid scaling by too small stddevs
+* (utils): remove ListReplayBuffer
+* (examples): update SAC exps
+* (examples): update SAC exps and SOP on swingup","['7a3e32ef4faf3b5d555160700de2fdb9219189c4', 'd9d3f7b95392aa6776479b2918c208293cda3cdb']",True,[]
+7139663d0f527d5e74971e0e62c297e91a96a040,"fix(raylab): update rllib imports in ray==1.0.0
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['c8b41d4f65e68b6e70eb511dcf792380711436a1'],False,"['raylab\\agents\\off_policy.py', 'raylab\\agents\\trainer.py', 'raylab\\execution\\warmup.py', 'raylab\\policy\\off_policy.py', 'raylab\\policy\\torch_policy.py']"
+207fa78223abb378458a72bd5536b5c7179b94ce,"fix(options): remove with_base_config
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['7139663d0f527d5e74971e0e62c297e91a96a040'],False,['raylab\\options.py']
+987b88215f8b71cfcb460830282af5aadabd7017,"fix(tests): remove with_java from ray init kwargs
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['207fa78223abb378458a72bd5536b5c7179b94ce'],False,['tests\\conftest.py']
+5d56e1d3072385dcf4287100b295246d50ac83bb,"fix(agents): substitute _policy_class for _policy attribute
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['987b88215f8b71cfcb460830282af5aadabd7017'],False,"['raylab\\agents\\acktr\\trainer.py', 'raylab\\agents\\mage\\trainer.py', 'raylab\\agents\\mbpo\\trainer.py', 'raylab\\agents\\naf\\trainer.py', 'raylab\\agents\\sac\\trainer.py', 'raylab\\agents\\sop\\trainer.py', 'raylab\\agents\\svg\\inf\\trainer.py', 'raylab\\agents\\svg\\one\\trainer.py', 'raylab\\agents\\svg\\soft\\trainer.py', 'raylab\\agents\\td3\\trainer.py', 'raylab\\agents\\trainer.py', 'raylab\\agents\\trpo\\trainer.py', 'tests\\raylab\\agents\\test_off_policy.py', 'tests\\raylab\\agents\\test_trainer.py']"
+60571813ad5c62da32bd5137fdaa0311d2fb58d3,"fix(options): update rllib config info for ray==1.0.0
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['5d56e1d3072385dcf4287100b295246d50ac83bb'],False,['raylab\\options.py']
+7e8c30e40ffcdd953d749f3d8f75de8ee4de1bd0,"fix(modules): initialize model before wrapping as residual
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['77ff2acde9d02d55cfa2016821aa5550fa4ec81c'],False,['raylab\\policy\\modules\\model\\stochastic\\builders.py']
+f8df0b8d78c93e212048c6ab1e3a6c0b9fbd7135,"Merge tag 'v0.14.9' into develop
+
+#### Fixes
+* (raylab): update rllib imports in ray==1.0.0
+* (options): update rllib config info for ray==1.0.0
+* (agents): substitute _policy_class for _policy attribute
+
+#### Refactorings
+* (modules): substitute residual model wrapper for residual model mixin
+
+#### Others
+* disable automatic review request by dependabot","['7e8c30e40ffcdd953d749f3d8f75de8ee4de1bd0', 'd9549466886f6285987bdebbe59b3ff4877d793a']",True,[]
+a5e073a8a69e84d78a34f17e823462a34fdc8909,"fix(envs): get env kwargs from config in reward functions
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['55964219ee9714adffff31d5826cd6dbed9cd820'],False,['raylab\\envs\\rewards.py']
+38d8dac430c2ad2c6c40e0c7203eac025071346c,"Merge tag 'v0.14.10' into develop
+
+#### Fixes
+* (envs): get env kwargs from config in reward functions
+
+#### Others
+* (deps): add ray[tune,rllib], dm-tree, tabulate","['a5e073a8a69e84d78a34f17e823462a34fdc8909', '80bc6e7fbd53854c4ec2ca8ad571de55dc527791']",True,[]
+95ff1f2686607d2c8dddfd83cac58e0c50fa3598,"fix(envs): get env kwargs from config in registry
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['d54ce448e27f29f7e73e2d54e7c239f6de5dbc5a'],False,['raylab\\envs\\registry.py']
+9bc494b898a7f590bf6f754cafc07c8b12d616ff,"Merge tag 'v0.14.11' into develop
+
+#### Fixes
+* (envs): get env kwargs from config in registry","['95ff1f2686607d2c8dddfd83cac58e0c50fa3598', '812012c8cd628bb09e021e22d1317695879924d6']",True,[]
+d902c7fe869a9ddf263381efbb9b4048a0b7092c,"fix(tests): pass kwargs to environments
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['7b8cfc7e481b0110b185a2ea4308ca7b1d6aea4a'],False,['tests\\raylab\\envs\\test_rewards.py']
+f81b17b8ee6ee61297135df5f3651459012e7378,"Merge tag 'v0.14.13' into develop
+
+### Fixes
+* (deps): require pytorch-lightning = ^1.0","['925584f15e976f7f31cef1b4674b3f7555bdeb9b', 'dcfcc76226daaf1e3bfc49de439c22c8e3f15bec']",True,[]
+ddbf7528fe3a6090682b9d55cc16621a616fc6d5,"fix(deps): add sklearn
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['f81b17b8ee6ee61297135df5f3651459012e7378'],False,"['poetry.lock', 'pyproject.toml']"
+dccfec6773161852d6be96e17c48a309b9cf8b07,"Merge tag 'v0.14.14' into develop
+
+#### Fixes
+* (deps): add sklearn","['ddbf7528fe3a6090682b9d55cc16621a616fc6d5', 'f9685dd4349bd54a9b966c4cf40b03915aef8836']",True,[]
+ebaaa5eb7407a1716af56b283c66c5380b4f90dc,"fix(cli): require --name parameter
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['f2053519cf62fc296d7d9b443ca3a5a4c634edad'],False,['raylab\\cli\\utils.py']
+fd4985f3f3627a60c7799fd4defe297dea224e86,"fix(examples): use torch as a framework in PG cartpole swingup
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['ebaaa5eb7407a1716af56b283c66c5380b4f90dc'],False,['examples\\PG\\cartpole_defaults.py']
+340a27fa13f9165abf7fbb1ff2d774a4cd05c37a,"fix(ci): update Install Poetry in poetry-package workflow
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['9e025ca48d78c25b7a865122a23510a0eaea7bb3'],False,['.github\\workflows\\poetry-package.yml']
+0b114241fff3cd4faf051346a5c842c0b1572c44,"Merge tag 'v0.14.17' into develop
+
+#### Fixes
+* (ci): update Install Poetry in poetry-package workflow","['d156e8eb30bc3b797c04a48101bda3d1808625dd', 'dee7f1dcb0c3769bbc68ec622a977a595018d3c5']",True,[]
+1a6d9a9423dfa9a64c82fe99fe490a1fb232a567,"fix(torch): use register_full_backward_hook in KFAC
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['4e778dc0f476ae0bac7546e22bf2c967316391a6'],False,"['raylab\\agents\\acktr\\policy.py', 'raylab\\policy\\optimizer_collection.py', 'raylab\\torch\\optim\\kfac.py']"
+a1efbf35e46b52db64bc62c7ca7dbe37e23ca4b8,"fix(torch): register KFAC hooks only when recording stats
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['1a6d9a9423dfa9a64c82fe99fe490a1fb232a567'],False,['raylab\\torch\\optim\\kfac.py']
+342ee79b81e93f10863d5e142d1c8e3050d387bb,"Merge tag 'v0.15.1' into develop
+
+#### Fixes
+* (torch): register KFAC hooks only when recording stats
+* (torch): use register_full_backward_hook in KFAC
+
+#### Others
+
+* ignore third party deprecation warnings in tests
+* remove pytest.ini
+* (agents): ignore agent TorchScript incompatability warning
+* (policy): ignore dataloader warnings from pytorch lightning
+* (torch): ignore deterministic actor layer norm warning
+* (torch): ignore all softmax input scaling warnings
+* (torch): ignore softmax input scaling warning
+* (torch): increase atol for normalized linear output test
+* (torch): evaluate second order gradients for nonlinear fc modules","['a1efbf35e46b52db64bc62c7ca7dbe37e23ca4b8', 'dc8a6d481d311b8ab8062196e92664bc577a8636']",True,[]
+2887e96401668903e90c090fde03b1de211bf322,"fix(options): update rllib config info for ray==1.2.0
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['c6de3faa9381c79c4e07fc23db28855100b71120'],False,['raylab\\options.py']
+43b5d8e8df0ad6bf2b697dcddac4066e32432552,"Merge tag 'v0.15.3' into develop
+
+#### Fixes
+* (options): update rllib config info for ray==1.2.0
+
+#### Refactorings
+* (policy): update lightning docs, signatures and annotations
+
+#### Others
+* set default framework option to 'torch' for trainers and policies
+* (tests): remove redundant parenthesis
+* (agents): pass framework as 'torch' in policy rollout test
+* (policy): change model parameters to enable checkpoint tests","['57e95b55fabc52c732237c0a58d614c376c6f348', '12b93003a863caf7f9ead621d3afe4c83c4d7ee1']",True,[]
+fc956633d6fdfb77df6ff5cd70bacf3b87233300,"chore(utils): fix spelling error
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['e8919f078f0e69aec73c024c721a9c09950a8b17'],False,"['raylab\\policy\\model_based\\lightning.py', 'raylab\\utils\\lightning.py']"
+eb4d9a530e96cbaf8b5861fab06237d06765f53b,"Merge tag 'v0.15.5' into develop
+
+#### New Features
+* (utils): suppress PytorchLightning outputs intelligently
+
+#### Others
+* (utils): fix spelling error
+* (examples): update ACKTR on pybullet cheetah
+* (agents): remove unused configs in ACKTR
+* ignore deprecation warnings from wandb","['0a499b60265951fb70a0f217dad008b60483db20', '8cd8a2cca5bbf3f3d74d255fff514b85afa5805b']",True,[]
+22e3503b4acd68831489b689f3921646ab5b3f15,"fix(cli): use future annotation style
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['f9dbbde74a65a43aee2e7774637e7d9be82f8566'],False,['raylab\\cli\\experiment_dashboard.py']
+007060d3d5aad5374ae3526d59eb6509cd311375,"fix(cli): downgrade bokeh to 2.2.2
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['22e3503b4acd68831489b689f3921646ab5b3f15'],False,"['poetry.lock', 'pyproject.toml']"
+f7cc78ad3c54c7489d0d3f27e25856ae607b16a5,"Merge tag 'v0.15.6' into develop
+
+#### Fixes
+* (cli): downgrade bokeh to 2.2.2
+* (cli): use future annotation style
+
+#### Refactorings
+* run isort on project
+* (utils): organize exp data loading and make test
+
+#### Docs
+* (examples): update PG cartpole defaults
+
+#### Others
+* (deps): bump cachetools from 4.2.1 to 4.2.2
+* (deps): bump pytorch-lightning from 1.2.9 to 1.2.10
+* (deps): bump dataclasses-json from 0.5.2 to 0.5.3
+* (deps): bump pytorch-lightning from 1.2.8 to 1.2.9
+* (cli): annotate dashboard functions
+* (cli): use subprocess.run to launch streamlit
+* (deps): bump wandb from 0.10.26 to 0.10.27
+* (deps): bump pytorch-lightning from 1.1.5 to 1.2.8
+* (deps): run poetry lock
+* (deps): bump pytorch-lightning from 1.2.7 to 1.2.8
+* (deps): bump wandb from 0.10.25 to 0.10.26
+* (deps): bump dm-tree from 0.1.5 to 0.1.6","['e97e2497273ec0540dade836ebd39f76ae0fd1f7', '30cc3df9b87eccdde0c19580d0d9551b25b246d8']",True,[]
+4a2f9573828dc76326305765692456b7c8d46583,"fix(deps): lock ray version to <1.3
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['30cc3df9b87eccdde0c19580d0d9551b25b246d8'],False,"['poetry.lock', 'pyproject.toml']"
+39fccdbb8668bc464ea2c7d345f5f7b8792f4bc0,"Merge tag 'v0.15.7' into develop
+
+#### Fixes
+* (deps): lock ray version to <1.3","['f7cc78ad3c54c7489d0d3f27e25856ae607b16a5', 'abbb19bb1f466a281e5df301b0bf506a65e811ff']",True,[]
+6390ab7cab43b87beb5a17e3d9e6e85779d6114a,"fix(cli): get progress column indexes only if present in data
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['abbb19bb1f466a281e5df301b0bf506a65e811ff'],False,['raylab\\cli\\experiment_dashboard.py']
+faa9c1a2998ec74b869b6c3d21334c7edf162571,"fix(cli): get progress column indexes only if present in data
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['569335009b820a944f87718d92c88150f371e5fb'],False,['raylab\\cli\\experiment_dashboard.py']
+2173e59ca39e34e29e29b30a69b8d750961ac005,"Merge tag 'v0.15.9' into develop
+
+#### Fixes
+* (cli): get progress column indexes only if present in data","['4755ace8c0c4feec000da3456159d2675c2d7b1e', 'c33430e0fca4b2b95c012eb87cba384e40b1f690']",True,[]
+289323d860f907b609e6152f7a95a88c40c066d8,"fix(agents): update options for ray 1.4.1
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['afb39d2fd5794f612206f8b4faaf2d633811d4fa'],False,['raylab\\options.py']
+6d5b71af774085448890732572a76eeb3cded6fb,"fix(agents): set simple_optimizer to True by default
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['7b8ae3cc2d2ed1edb8f22b98f463f361c93a1407'],False,['raylab\\agents\\trainer.py']
+c8d4beb23a402403eb731f9cf81874221c176caf,"fix(agents): remove invalid option overrides
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['b11e6c11d90aa5c1248b3d424c027610ef8aab7d'],False,"['raylab\\agents\\off_policy.py', 'raylab\\agents\\svg\\soft\\policy.py', 'raylab\\agents\\trainer.py']"
+9e15d43c65d72b3a051a82d1c7421f0fe267ced1,"fix(policy): add extra fetches to view requirements
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['2c1d14c4dae320d2fea44bcd17aee2ed2ceb5848'],False,['raylab\\policy\\torch_policy.py']
+2a9146741b6d687d0cd229a619469b971d22acd6,"fix(policy): return val loss tensor on val step
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['473479a16efda0dbcac39404687e4be4defad3f7'],False,['raylab\\policy\\model_based\\lightning.py']
+dba40e2a0ad54bff0832ac24fbda7b2a3c2a5336,"fix(policy): update early stopping method signature
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['2a9146741b6d687d0cd229a619469b971d22acd6'],False,['raylab\\policy\\model_based\\lightning.py']
+22c220949f2b5fe05621e349a956e7cc2a7cc843,"fix(policy): update early stopping with no val set
+
+Signed-off-by: Ângelo Lovatto <angelolovatto@gmail.com>",['f05a8609fae57f4653fe92e71ea31169b273d31c'],False,"['raylab\\policy\\model_based\\lightning.py', 'tests\\raylab\\policy\\model_based\\test_lightning.py']"
